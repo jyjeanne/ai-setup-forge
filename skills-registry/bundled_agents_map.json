@@ -1,0 +1,50 @@
+{
+  "api-tester-specialist": {
+    "category": "testing",
+    "tags": ["api", "rest-assured", "supertest", "playwright"]
+  },
+  "architect": {
+    "category": "orchestrator",
+    "tags": ["planning", "delegation", "multi-agent"]
+  },
+  "docs-agent": {
+    "category": "documentation",
+    "tags": ["markdown", "technical-writing"]
+  },
+  "flaky-test-hunter": {
+    "category": "testing",
+    "tags": ["flaky-tests", "debugging", "test-stability"]
+  },
+  "implementation-plan": {
+    "category": "orchestrator",
+    "tags": ["planning", "implementation", "ai-to-ai"]
+  },
+  "playwright-test-generator": {
+    "category": "testing",
+    "tags": ["playwright", "test-generation", "browser-testing", "typescript"]
+  },
+  "playwright-test-healer": {
+    "category": "testing",
+    "tags": ["playwright", "debugging", "test-maintenance"]
+  },
+  "playwright-test-planner": {
+    "category": "testing",
+    "tags": ["playwright", "test-planning", "test-design"]
+  },
+  "principal-software-engineer": {
+    "category": "orchestrator",
+    "tags": ["engineering-excellence", "technical-leadership", "code-quality"]
+  },
+  "selenium-test-executor": {
+    "category": "testing",
+    "tags": ["selenium", "test-execution", "java", "debugging"]
+  },
+  "selenium-test-specialist": {
+    "category": "testing",
+    "tags": ["selenium", "java", "page-object-model", "junit"]
+  },
+  "test-refactor-specialist": {
+    "category": "testing",
+    "tags": ["refactoring", "page-object-model", "test-architecture"]
+  }
+}

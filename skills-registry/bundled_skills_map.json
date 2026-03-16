@@ -1,0 +1,7091 @@
+{
+  "a11y-playwright-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "accessibility",
+      "wcag",
+      "axe-core",
+      "playwright"
+    ]
+  },
+  "accessibility-audit": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "accessibility-compliance": {
+    "categories": [
+      "web",
+      "design",
+      "mobile"
+    ],
+    "tags": [
+      "accessibility",
+      "compliance"
+    ]
+  },
+  "accessibility-selenium-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "accessibility",
+      "wcag",
+      "axe-core",
+      "selenium",
+      "java"
+    ]
+  },
+  "adapter-pattern-typescript": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "typescript"
+    ]
+  },
+  "add-educational-comments": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "add",
+      "educational",
+      "comments"
+    ]
+  },
+  "advanced-rbac": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "rbac"
+    ]
+  },
+  "agent-browser": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "agent",
+      "browser"
+    ]
+  },
+  "agent-governance": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "agent",
+      "governance"
+    ]
+  },
+  "agentation": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "agentation"
+    ]
+  },
+  "agentic-eval": {
+    "categories": [
+      "web",
+      "testing",
+      "ai-engineering"
+    ],
+    "tags": [
+      "agentic",
+      "eval"
+    ]
+  },
+  "ai-agent-design-patterns": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm",
+      "react"
+    ]
+  },
+  "ai-model-evaluation": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm"
+    ]
+  },
+  "ai-prompt-engineering-safety-review": {
+    "categories": [
+      "testing",
+      "security",
+      "ai-engineering"
+    ],
+    "tags": [
+      "prompt",
+      "engineering",
+      "safety"
+    ]
+  },
+  "ai-tool-compliance": {
+    "categories": [
+      "web",
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "tool",
+      "compliance"
+    ]
+  },
+  "airflow-dag-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "airflow",
+      "dag",
+      "patterns"
+    ]
+  },
+  "algorithmic-art": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "algorithmic",
+      "art"
+    ]
+  },
+  "angular-migration": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "angular",
+      "migration"
+    ]
+  },
+  "ansible-playbook-creation": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "ansible"
+    ]
+  },
+  "anti-reversing-techniques": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "anti",
+      "reversing",
+      "techniques"
+    ]
+  },
+  "api-data-fetching-tanstack": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "graphql"
+    ]
+  },
+  "api-design": {
+    "categories": [
+      "architecture",
+      "web"
+    ],
+    "tags": [
+      "rest-api",
+      "openapi"
+    ]
+  },
+  "api-design-principles": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "api",
+      "design",
+      "principles"
+    ]
+  },
+  "api-documentation": {
+    "categories": [
+      "web",
+      "documentation"
+    ],
+    "tags": [
+      "api",
+      "documentation"
+    ]
+  },
+  "api-documentation-best-practices": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs",
+      "graphql",
+      "openapi"
+    ]
+  },
+  "api-rest-endpoint-design": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "api-versioning-strategies": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "app-store-deployment-guide": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react",
+      "expo"
+    ]
+  },
+  "appinsights-instrumentation": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "appinsights",
+      "instrumentation"
+    ]
+  },
+  "apple-appstore-reviewer": {
+    "categories": [
+      "performance"
+    ],
+    "tags": [
+      "apple",
+      "appstore",
+      "reviewer"
+    ]
+  },
+  "arch-linux-triage": {
+    "categories": [
+      "design"
+    ],
+    "tags": [
+      "arch",
+      "linux",
+      "triage"
+    ]
+  },
+  "architectural-decision-records-adr": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs"
+    ]
+  },
+  "architecture-blueprint-generator": {
+    "categories": [
+      "web",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "architecture",
+      "blueprint",
+      "generator"
+    ]
+  },
+  "architecture-decision-records": {
+    "categories": [
+      "devops",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "architecture",
+      "decision",
+      "records"
+    ]
+  },
+  "architecture-patterns": {
+    "categories": [
+      "architecture",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "architecture",
+      "patterns"
+    ]
+  },
+  "aspire": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "aspire"
+    ]
+  },
+  "aspnet-minimal-api-openapi": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "aspnet",
+      "minimal",
+      "api",
+      "openapi"
+    ]
+  },
+  "async-python-patterns": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "async",
+      "python",
+      "patterns"
+    ]
+  },
+  "attack-tree-construction": {
+    "categories": [
+      "web",
+      "security",
+      "mobile"
+    ],
+    "tags": [
+      "attack",
+      "tree",
+      "construction"
+    ]
+  },
+  "auth-implementation-patterns": {
+    "categories": [
+      "web",
+      "security"
+    ],
+    "tags": [
+      "auth",
+      "implementation",
+      "patterns"
+    ]
+  },
+  "authentication-setup": {
+    "categories": [
+      "security",
+      "design"
+    ],
+    "tags": [
+      "authentication",
+      "setup"
+    ]
+  },
+  "authentication-strategy-selection": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "oauth",
+      "jwt"
+    ]
+  },
+  "automate-this": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "automate",
+      "this"
+    ]
+  },
+  "automated-database-backups": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "aws",
+      "aws-s3"
+    ]
+  },
+  "autoresearch": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "autoresearch"
+    ]
+  },
+  "aws-lambda-function-design": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "aws",
+      "aws-lambda"
+    ]
+  },
+  "aws-secrets-manager-integration": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "aws"
+    ]
+  },
+  "az-cost-optimize": {
+    "categories": [
+      "devops",
+      "methodology",
+      "performance"
+    ],
+    "tags": [
+      "cost",
+      "optimize"
+    ]
+  },
+  "azure-deployment-preflight": {
+    "categories": [
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "azure",
+      "deployment",
+      "preflight"
+    ]
+  },
+  "azure-devops-cli": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "azure",
+      "devops",
+      "cli"
+    ]
+  },
+  "azure-functions-basics": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "typescript",
+      "azure"
+    ]
+  },
+  "azure-pricing": {
+    "categories": [
+      "devops",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "azure",
+      "pricing"
+    ]
+  },
+  "azure-resource-health-diagnose": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "azure",
+      "resource",
+      "health",
+      "diagnose"
+    ]
+  },
+  "azure-resource-visualizer": {
+    "categories": [
+      "devops",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "azure",
+      "resource",
+      "visualizer"
+    ]
+  },
+  "azure-role-selector": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "azure",
+      "role",
+      "selector"
+    ]
+  },
+  "azure-static-web-apps": {
+    "categories": [
+      "web",
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "azure",
+      "static",
+      "web",
+      "apps"
+    ]
+  },
+  "backend-testing": {
+    "categories": [
+      "testing",
+      "security",
+      "database"
+    ],
+    "tags": [
+      "backend",
+      "testing"
+    ]
+  },
+  "background-jobs-bullmq": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "redis",
+      "message-queue"
+    ]
+  },
+  "backtesting-frameworks": {
+    "categories": [
+      "web",
+      "testing"
+    ],
+    "tags": [
+      "backtesting",
+      "frameworks"
+    ]
+  },
+  "bash-defensive-patterns": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "bash",
+      "defensive",
+      "patterns"
+    ]
+  },
+  "bats-testing-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "bats",
+      "testing",
+      "patterns"
+    ]
+  },
+  "bazel-build-optimization": {
+    "categories": [
+      "web",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "bazel",
+      "build",
+      "optimization"
+    ]
+  },
+  "bff-pattern-implementation": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "grpc"
+    ]
+  },
+  "bigquery-pipeline-audit": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "bigquery",
+      "pipeline",
+      "audit"
+    ]
+  },
+  "billing-automation": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "billing",
+      "automation"
+    ]
+  },
+  "binary-analysis-patterns": {
+    "categories": [
+      "database"
+    ],
+    "tags": [
+      "binary",
+      "analysis",
+      "patterns"
+    ]
+  },
+  "blue-green-deployment-strategy": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure"
+    ]
+  },
+  "blue-ocean-strategy": {
+    "categories": [
+      "marketing",
+      "product"
+    ],
+    "tags": [
+      "strategy"
+    ]
+  },
+  "bmad-gds": {
+    "categories": [
+      "testing",
+      "devops",
+      "architecture"
+    ],
+    "tags": [
+      "bmad",
+      "gds"
+    ]
+  },
+  "bmad-idea": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "bmad",
+      "idea"
+    ]
+  },
+  "bmad-orchestrator": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "bmad",
+      "orchestrator"
+    ]
+  },
+  "boost-prompt": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "boost",
+      "prompt"
+    ]
+  },
+  "branch-protection-rules": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality"
+    ]
+  },
+  "brand-guidelines": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "brand",
+      "guidelines"
+    ]
+  },
+  "breakdown-epic-arch": {
+    "categories": [
+      "web",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "breakdown",
+      "epic",
+      "arch"
+    ]
+  },
+  "breakdown-epic-pm": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "breakdown",
+      "epic"
+    ]
+  },
+  "breakdown-feature-implementation": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "breakdown",
+      "feature",
+      "implementation"
+    ]
+  },
+  "breakdown-feature-prd": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "breakdown",
+      "feature",
+      "prd"
+    ]
+  },
+  "breakdown-plan": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "breakdown",
+      "plan"
+    ]
+  },
+  "breakdown-test": {
+    "categories": [
+      "testing",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "breakdown",
+      "test"
+    ]
+  },
+  "browser-storage": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "caching-strategy-redis": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "redis"
+    ]
+  },
+  "canvas-design": {
+    "categories": [
+      "documentation",
+      "design"
+    ],
+    "tags": [
+      "canvas",
+      "design"
+    ]
+  },
+  "canvas-threejs-basics": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "3d"
+    ]
+  },
+  "centos-linux-triage": {
+    "categories": [
+      "design"
+    ],
+    "tags": [
+      "centos",
+      "linux",
+      "triage"
+    ]
+  },
+  "changelog-automation": {
+    "categories": [
+      "database",
+      "methodology",
+      "documentation"
+    ],
+    "tags": [
+      "changelog",
+      "automation"
+    ]
+  },
+  "changelog-maintenance": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs",
+      "redis",
+      "css"
+    ]
+  },
+  "chaos-engineering-basics": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure"
+    ]
+  },
+  "chrome-devtools": {
+    "categories": [
+      "web",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "chrome",
+      "devtools"
+    ]
+  },
+  "ci-pipeline-github-actions": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "linting"
+    ]
+  },
+  "claimable-postgres": {
+    "categories": [
+      "web",
+      "testing",
+      "database"
+    ],
+    "tags": [
+      "claimable",
+      "postgres"
+    ]
+  },
+  "claude-api": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "claude",
+      "api"
+    ]
+  },
+  "clean-architecture": {
+    "categories": [
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "solid",
+      "hexagonal"
+    ]
+  },
+  "clean-architecture-node": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "express"
+    ]
+  },
+  "clean-code": {
+    "categories": [
+      "design",
+      "refactoring"
+    ],
+    "tags": [
+      "solid",
+      "naming"
+    ]
+  },
+  "cli-mastery": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "cli",
+      "mastery"
+    ]
+  },
+  "cloud-design-patterns": {
+    "categories": [
+      "devops",
+      "security",
+      "architecture"
+    ],
+    "tags": [
+      "cloud",
+      "design",
+      "patterns"
+    ]
+  },
+  "code-comments-best-practices": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs",
+      "typescript"
+    ]
+  },
+  "code-exemplars-blueprint-generator": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "code",
+      "exemplars",
+      "blueprint",
+      "generator"
+    ]
+  },
+  "code-refactoring": {
+    "categories": [
+      "devops",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "code",
+      "refactoring"
+    ]
+  },
+  "code-review": {
+    "categories": [
+      "methodology",
+      "testing"
+    ],
+    "tags": [
+      "review"
+    ]
+  },
+  "code-review-excellence": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "code",
+      "review",
+      "excellence"
+    ]
+  },
+  "code-review-guidelines": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality"
+    ]
+  },
+  "code-review-security": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "aws"
+    ]
+  },
+  "codebase-search": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "codebase",
+      "search"
+    ]
+  },
+  "comment-code-generate-a-tutorial": {
+    "categories": [
+      "database"
+    ],
+    "tags": [
+      "comment",
+      "code",
+      "generate"
+    ]
+  },
+  "competitive-landscape": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "competitive",
+      "landscape"
+    ]
+  },
+  "contagious": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "viral",
+      "word-of-mouth"
+    ]
+  },
+  "containerize-aspnet-framework": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "containerize",
+      "aspnet",
+      "framework"
+    ]
+  },
+  "containerize-aspnetcore": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "containerize",
+      "aspnetcore"
+    ]
+  },
+  "content-security-policy-csp": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security"
+    ]
+  },
+  "context-driven-development": {
+    "categories": [
+      "ai-engineering",
+      "methodology",
+      "documentation"
+    ],
+    "tags": [
+      "context",
+      "driven",
+      "development"
+    ]
+  },
+  "context-map": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "context",
+      "map"
+    ]
+  },
+  "continuous-discovery": {
+    "categories": [
+      "product",
+      "methodology"
+    ],
+    "tags": [
+      "user-research"
+    ]
+  },
+  "contributing-guidelines-contributing": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs"
+    ]
+  },
+  "conventional-commit": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "conventional",
+      "commit"
+    ]
+  },
+  "convert-plaintext-to-md": {
+    "categories": [
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "convert",
+      "plaintext"
+    ]
+  },
+  "copilot-cli-quickstart": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "copilot",
+      "cli",
+      "quickstart"
+    ]
+  },
+  "copilot-coding-agent": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "copilot",
+      "coding",
+      "agent"
+    ]
+  },
+  "copilot-instructions-blueprint-generator": {
+    "categories": [
+      "web",
+      "architecture",
+      "methodology"
+    ],
+    "tags": [
+      "copilot",
+      "instructions",
+      "blueprint",
+      "generator"
+    ]
+  },
+  "copilot-sdk": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "copilot",
+      "sdk"
+    ]
+  },
+  "copilot-spaces": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "copilot",
+      "spaces"
+    ]
+  },
+  "copilot-usage-metrics": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "copilot",
+      "usage",
+      "metrics"
+    ]
+  },
+  "cosmosdb-datamodeling": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "cosmosdb",
+      "datamodeling"
+    ]
+  },
+  "cost-optimization": {
+    "categories": [
+      "devops",
+      "performance"
+    ],
+    "tags": [
+      "cost",
+      "optimization"
+    ]
+  },
+  "cost-optimization-cloud": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "aws",
+      "azure"
+    ]
+  },
+  "cqrs-implementation": {
+    "categories": [
+      "web",
+      "architecture",
+      "database"
+    ],
+    "tags": [
+      "cqrs",
+      "implementation"
+    ]
+  },
+  "cqrs-pattern-implementation": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "create-agentsmd": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "create",
+      "agentsmd"
+    ]
+  },
+  "create-architectural-decision-record": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "create",
+      "architectural",
+      "decision",
+      "record"
+    ]
+  },
+  "create-github-action-workflow-specification": {
+    "categories": [
+      "testing",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "create",
+      "github",
+      "action",
+      "workflow"
+    ]
+  },
+  "create-github-issue-feature-from-specification": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "create",
+      "github",
+      "issue",
+      "feature"
+    ]
+  },
+  "create-github-issues-feature-from-implementation-plan": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "create",
+      "github",
+      "issues",
+      "feature"
+    ]
+  },
+  "create-github-issues-for-unmet-specification-requirements": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "create",
+      "github",
+      "issues"
+    ]
+  },
+  "create-github-pull-request-from-specification": {
+    "categories": [
+      "testing",
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "create",
+      "github",
+      "pull",
+      "request"
+    ]
+  },
+  "create-implementation-plan": {
+    "categories": [
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "create",
+      "implementation",
+      "plan"
+    ]
+  },
+  "create-llms": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "create",
+      "llms"
+    ]
+  },
+  "create-readme": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "create",
+      "readme"
+    ]
+  },
+  "create-specification": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "create",
+      "specification"
+    ]
+  },
+  "create-spring-boot-java-project": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "create",
+      "spring",
+      "boot",
+      "java"
+    ]
+  },
+  "create-spring-boot-kotlin-project": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "create",
+      "spring",
+      "boot",
+      "kotlin"
+    ]
+  },
+  "create-technical-spike": {
+    "categories": [
+      "devops",
+      "documentation"
+    ],
+    "tags": [
+      "create",
+      "technical",
+      "spike"
+    ]
+  },
+  "create-tldr-page": {
+    "categories": [
+      "web",
+      "documentation"
+    ],
+    "tags": [
+      "create",
+      "tldr",
+      "page"
+    ]
+  },
+  "creating-oracle-to-postgres-master-migration-plan": {
+    "categories": [
+      "devops",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "creating",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "creating-oracle-to-postgres-migration-bug-report": {
+    "categories": [
+      "database",
+      "documentation"
+    ],
+    "tags": [
+      "creating",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "creating-oracle-to-postgres-migration-integration-tests": {
+    "categories": [
+      "testing",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "creating",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "cro-methodology": {
+    "categories": [
+      "marketing",
+      "web"
+    ],
+    "tags": [
+      "conversion"
+    ]
+  },
+  "crossing-the-chasm": {
+    "categories": [
+      "marketing",
+      "product"
+    ],
+    "tags": [
+      "adoption"
+    ]
+  },
+  "csharp-async": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "csharp",
+      "async"
+    ]
+  },
+  "csharp-docs": {
+    "categories": [
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "csharp",
+      "docs"
+    ]
+  },
+  "csharp-mcp-server-generator": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "csharp",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "csharp-mstest": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "csharp",
+      "mstest"
+    ]
+  },
+  "csharp-nunit": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "csharp",
+      "nunit"
+    ]
+  },
+  "csharp-tunit": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "csharp",
+      "tunit"
+    ]
+  },
+  "csharp-xunit": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "csharp",
+      "xunit"
+    ]
+  },
+  "csrf-protection-strategies": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "csrf"
+    ]
+  },
+  "css-grid-vs-flexbox": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "css"
+    ]
+  },
+  "custom-react-hook-creation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "dark-mode-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "css"
+    ]
+  },
+  "data-analysis": {
+    "categories": [
+      "database"
+    ],
+    "tags": [
+      "data",
+      "analysis"
+    ]
+  },
+  "data-quality-frameworks": {
+    "categories": [
+      "web",
+      "testing"
+    ],
+    "tags": [
+      "data",
+      "quality",
+      "frameworks"
+    ]
+  },
+  "data-storytelling": {
+    "categories": [
+      "web",
+      "database"
+    ],
+    "tags": [
+      "data",
+      "storytelling"
+    ]
+  },
+  "database-locking-strategies": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "database-migration": {
+    "categories": [
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "database",
+      "migration"
+    ]
+  },
+  "database-schema-design": {
+    "categories": [
+      "database",
+      "performance",
+      "design"
+    ],
+    "tags": [
+      "database",
+      "schema",
+      "design"
+    ]
+  },
+  "database-schema-migration": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "database-seeding": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "database-selection-sql-vs-nosql": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "mongodb",
+      "postgresql",
+      "redis"
+    ]
+  },
+  "datanalysis-credit-risk": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "mobile"
+    ],
+    "tags": [
+      "datanalysis",
+      "credit",
+      "risk"
+    ]
+  },
+  "dataverse-python-advanced-patterns": {
+    "categories": [
+      "performance"
+    ],
+    "tags": [
+      "dataverse",
+      "python",
+      "advanced",
+      "patterns"
+    ]
+  },
+  "dataverse-python-production-code": {
+    "categories": [
+      "performance"
+    ],
+    "tags": [
+      "dataverse",
+      "python",
+      "production",
+      "code"
+    ]
+  },
+  "dataverse-python-quickstart": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "dataverse",
+      "python",
+      "quickstart"
+    ]
+  },
+  "dataverse-python-usecase-builder": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "dataverse",
+      "python",
+      "usecase",
+      "builder"
+    ]
+  },
+  "dbt-transformation-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "database"
+    ],
+    "tags": [
+      "dbt",
+      "transformation",
+      "patterns"
+    ]
+  },
+  "ddia-systems": {
+    "categories": [
+      "architecture",
+      "database"
+    ],
+    "tags": [
+      "distributed-systems"
+    ]
+  },
+  "dead-code-elimination": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality",
+      "typescript",
+      "expo"
+    ]
+  },
+  "debian-linux-triage": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "debian",
+      "linux",
+      "triage"
+    ]
+  },
+  "debugging": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "debugging"
+    ]
+  },
+  "debugging-strategies": {
+    "categories": [
+      "devops",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "debugging",
+      "strategies"
+    ]
+  },
+  "declarative-agents": {
+    "categories": [
+      "testing",
+      "methodology"
+    ],
+    "tags": [
+      "declarative",
+      "agents"
+    ]
+  },
+  "defi-protocol-templates": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "defi",
+      "protocol",
+      "templates"
+    ]
+  },
+  "dependency-update-audit": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure"
+    ]
+  },
+  "dependency-upgrade": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "dependency",
+      "upgrade"
+    ]
+  },
+  "dependency-vulnerability-scanning": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security"
+    ]
+  },
+  "deploy-to-vercel": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "deploy",
+      "vercel"
+    ]
+  },
+  "deployment-automation": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "deployment",
+      "automation"
+    ]
+  },
+  "deployment-pipeline-design": {
+    "categories": [
+      "devops",
+      "security",
+      "methodology"
+    ],
+    "tags": [
+      "deployment",
+      "pipeline",
+      "design"
+    ]
+  },
+  "design-everyday-things": {
+    "categories": [
+      "ux",
+      "design"
+    ],
+    "tags": [
+      "usability"
+    ]
+  },
+  "design-md": {
+    "categories": [
+      "design"
+    ],
+    "tags": [
+      "design"
+    ]
+  },
+  "design-sprint": {
+    "categories": [
+      "product",
+      "methodology"
+    ],
+    "tags": [
+      "sprint",
+      "prototype"
+    ]
+  },
+  "design-system": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "design",
+      "system"
+    ]
+  },
+  "design-system-patterns": {
+    "categories": [
+      "web",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "design",
+      "system",
+      "patterns"
+    ]
+  },
+  "devops-rollout-plan": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "devops",
+      "rollout",
+      "plan"
+    ]
+  },
+  "distributed-tracing": {
+    "categories": [
+      "devops",
+      "architecture",
+      "database"
+    ],
+    "tags": [
+      "distributed",
+      "tracing"
+    ]
+  },
+  "distributed-transactions-sagas": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "doc-coauthoring": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "doc",
+      "coauthoring"
+    ]
+  },
+  "docker-containerization-node": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "typescript",
+      "docker",
+      "kubernetes"
+    ]
+  },
+  "documentation": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs"
+    ]
+  },
+  "documentation-writer": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "documentation",
+      "writer"
+    ]
+  },
+  "docx": {
+    "categories": [
+      "devops",
+      "database",
+      "documentation"
+    ],
+    "tags": [
+      "docx"
+    ]
+  },
+  "domain-driven-design": {
+    "categories": [
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "ddd"
+    ]
+  },
+  "domain-driven-design-basics": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "dotnet-backend-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "architecture"
+    ],
+    "tags": [
+      "dotnet",
+      "backend",
+      "patterns"
+    ]
+  },
+  "dotnet-best-practices": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "dotnet"
+    ]
+  },
+  "dotnet-design-pattern-review": {
+    "categories": [
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "dotnet",
+      "design",
+      "pattern",
+      "review"
+    ]
+  },
+  "dotnet-upgrade": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "dotnet",
+      "upgrade"
+    ]
+  },
+  "doublecheck": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "doublecheck"
+    ]
+  },
+  "drive-motivation": {
+    "categories": [
+      "methodology",
+      "product"
+    ],
+    "tags": [
+      "motivation"
+    ]
+  },
+  "e2e-testing-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "e2e",
+      "testing",
+      "patterns"
+    ]
+  },
+  "e2e-testing-playwright": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "testing",
+      "typescript",
+      "playwright"
+    ]
+  },
+  "editorconfig": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "editorconfig"
+    ]
+  },
+  "ef-core": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "core"
+    ]
+  },
+  "elasticsearch-integration": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "elasticsearch"
+    ]
+  },
+  "embedding-strategies": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "embedding",
+      "strategies"
+    ]
+  },
+  "employment-contract-templates": {
+    "categories": [
+      "devops",
+      "documentation"
+    ],
+    "tags": [
+      "employment",
+      "contract",
+      "templates"
+    ]
+  },
+  "enhance-prompt": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "enhance",
+      "prompt"
+    ]
+  },
+  "entra-agent-user": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "entra",
+      "agent",
+      "user"
+    ]
+  },
+  "environment-setup": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "environment",
+      "setup"
+    ]
+  },
+  "error-handling-express": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "express"
+    ]
+  },
+  "error-handling-patterns": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "error",
+      "handling",
+      "patterns"
+    ]
+  },
+  "eslint-prettier-setup": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality",
+      "linting"
+    ]
+  },
+  "eval-driven-dev": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "eval",
+      "driven",
+      "dev"
+    ]
+  },
+  "event-driven-architecture-basics": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "react",
+      "aws"
+    ]
+  },
+  "event-store-design": {
+    "categories": [
+      "web",
+      "devops",
+      "design"
+    ],
+    "tags": [
+      "event",
+      "store",
+      "design"
+    ]
+  },
+  "excalidraw-diagram-generator": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "excalidraw",
+      "diagram",
+      "generator"
+    ]
+  },
+  "express-middleware-creation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "express"
+    ]
+  },
+  "fabric": {
+    "categories": [
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "fabric"
+    ]
+  },
+  "fabric-lakehouse": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "fabric",
+      "lakehouse"
+    ]
+  },
+  "fastapi-templates": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "fastapi",
+      "templates"
+    ]
+  },
+  "feature-flag-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "fedora-linux-triage": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "fedora",
+      "linux",
+      "triage"
+    ]
+  },
+  "file-organization": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "file",
+      "organization"
+    ]
+  },
+  "file-storage-s3-minio": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "aws",
+      "aws-s3"
+    ]
+  },
+  "file-upload-handling": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "aws",
+      "aws-s3"
+    ]
+  },
+  "finalize-agent-prompt": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "finalize",
+      "agent",
+      "prompt"
+    ]
+  },
+  "find-skills": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "ai-setup-forge"
+    ]
+  },
+  "fine-tuning-basics": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm"
+    ]
+  },
+  "finnish-humanizer": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "finnish",
+      "humanizer"
+    ]
+  },
+  "firebase-cli": {
+    "categories": [
+      "web",
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "firebase",
+      "cli"
+    ]
+  },
+  "first-ask": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "first",
+      "ask"
+    ]
+  },
+  "flowstudio-power-automate-build": {
+    "categories": [
+      "web",
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "flowstudio",
+      "power",
+      "automate",
+      "build"
+    ]
+  },
+  "flowstudio-power-automate-debug": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "flowstudio",
+      "power",
+      "automate",
+      "debug"
+    ]
+  },
+  "flowstudio-power-automate-mcp": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "flowstudio",
+      "power",
+      "automate",
+      "mcp"
+    ]
+  },
+  "fluentui-blazor": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "fluentui",
+      "blazor"
+    ]
+  },
+  "folder-structure-blueprint-generator": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "folder",
+      "structure",
+      "blueprint",
+      "generator"
+    ]
+  },
+  "form-handling-react-hook-form": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "frontend-backend-communication-patterns": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "graphql",
+      "websocket",
+      "grpc"
+    ]
+  },
+  "frontend-design": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "frontend",
+      "design"
+    ]
+  },
+  "frontend-design-system": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "frontend",
+      "design",
+      "system"
+    ]
+  },
+  "frontend-error-boundary": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "game-engine": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "game",
+      "engine"
+    ]
+  },
+  "gdpr-data-handling": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "gdpr",
+      "data",
+      "handling"
+    ]
+  },
+  "gen-specs-as-issues": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "gen",
+      "specs",
+      "issues"
+    ]
+  },
+  "generate-custom-instructions-from-codebase": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "generate",
+      "custom",
+      "instructions",
+      "from"
+    ]
+  },
+  "genkit": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "genkit"
+    ]
+  },
+  "gh-cli": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "cli"
+    ]
+  },
+  "git-advanced-workflows": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "advanced",
+      "workflows"
+    ]
+  },
+  "git-branching-strategy": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure"
+    ]
+  },
+  "git-commit": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "commit"
+    ]
+  },
+  "git-commit-convention-conventional-commits": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality"
+    ]
+  },
+  "git-flow-branch-creator": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "flow",
+      "branch",
+      "creator"
+    ]
+  },
+  "git-hooks-husky": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality",
+      "git-hooks"
+    ]
+  },
+  "git-submodule": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "submodule"
+    ]
+  },
+  "git-workflow": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "workflow"
+    ]
+  },
+  "github-actions-templates": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "github",
+      "actions",
+      "templates"
+    ]
+  },
+  "github-copilot-starter": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "github",
+      "copilot",
+      "starter"
+    ]
+  },
+  "github-issues": {
+    "categories": [
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "github",
+      "issues"
+    ]
+  },
+  "gitlab-ci-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "gitlab",
+      "patterns"
+    ]
+  },
+  "gitops-workflow": {
+    "categories": [
+      "devops",
+      "methodology",
+      "design"
+    ],
+    "tags": [
+      "gitops",
+      "workflow"
+    ]
+  },
+  "global-state-management-redux": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "redux"
+    ]
+  },
+  "go-concurrency-patterns": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "concurrency",
+      "patterns"
+    ]
+  },
+  "go-mcp-server-generator": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "godot-gdscript-patterns": {
+    "categories": [
+      "web",
+      "performance"
+    ],
+    "tags": [
+      "godot",
+      "gdscript",
+      "patterns"
+    ]
+  },
+  "google-cloud-run-deployment": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "gcp"
+    ]
+  },
+  "google-workspace": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "google",
+      "workspace"
+    ]
+  },
+  "grafana-dashboards": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "grafana",
+      "dashboards"
+    ]
+  },
+  "graphql-schema-design": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "graphql"
+    ]
+  },
+  "grpc-service-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "grpc"
+    ]
+  },
+  "handling-large-lists-virtualization": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "health-check-endpoint": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "kubernetes",
+      "aws"
+    ]
+  },
+  "helm-chart-scaffolding": {
+    "categories": [
+      "devops",
+      "design"
+    ],
+    "tags": [
+      "helm",
+      "chart",
+      "scaffolding"
+    ]
+  },
+  "high-perf-browser": {
+    "categories": [
+      "web",
+      "performance"
+    ],
+    "tags": [
+      "browser",
+      "networking"
+    ]
+  },
+  "hooked-ux": {
+    "categories": [
+      "ux",
+      "product"
+    ],
+    "tags": [
+      "engagement",
+      "habits"
+    ]
+  },
+  "hundred-million-offers": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "pricing",
+      "offers"
+    ]
+  },
+  "hybrid-cloud-networking": {
+    "categories": [
+      "web",
+      "devops",
+      "architecture"
+    ],
+    "tags": [
+      "hybrid",
+      "cloud",
+      "networking"
+    ]
+  },
+  "hybrid-search-implementation": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "hybrid",
+      "search",
+      "implementation"
+    ]
+  },
+  "image-manipulation-image-magick": {
+    "categories": [
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "image",
+      "manipulation",
+      "image",
+      "magick"
+    ]
+  },
+  "import-infrastructure-as-code": {
+    "categories": [
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "import",
+      "infrastructure",
+      "code"
+    ]
+  },
+  "improve-retention": {
+    "categories": [
+      "product",
+      "marketing"
+    ],
+    "tags": [
+      "retention"
+    ]
+  },
+  "incident-runbook-templates": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "incident",
+      "runbook",
+      "templates"
+    ]
+  },
+  "influence-psychology": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "persuasion"
+    ]
+  },
+  "infrastructure-as-code-terraform": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "terraform",
+      "aws",
+      "azure"
+    ]
+  },
+  "input-validation-zod": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "typescript",
+      "zod"
+    ]
+  },
+  "inspired-product": {
+    "categories": [
+      "product"
+    ],
+    "tags": [
+      "product-management"
+    ]
+  },
+  "interaction-design": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "interaction",
+      "design"
+    ]
+  },
+  "internal-comms": {
+    "categories": [
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "internal",
+      "comms"
+    ]
+  },
+  "internationalization-i18n": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "i18n"
+    ]
+  },
+  "ios-hig-design": {
+    "categories": [
+      "ux",
+      "design"
+    ],
+    "tags": [
+      "ios",
+      "mobile"
+    ]
+  },
+  "issue-fields-migration": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "issue",
+      "fields",
+      "migration"
+    ]
+  },
+  "istio-traffic-management": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "istio",
+      "traffic",
+      "management"
+    ]
+  },
+  "java-add-graalvm-native-image-support": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "java",
+      "add",
+      "graalvm",
+      "native"
+    ]
+  },
+  "java-docs": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "java",
+      "docs"
+    ]
+  },
+  "java-junit": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "java",
+      "junit"
+    ]
+  },
+  "java-mcp-server-generator": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "java",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "java-refactoring": {
+    "categories": [
+      "refactoring"
+    ],
+    "tags": [
+      "java"
+    ]
+  },
+  "java-refactoring-extract-method": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "java",
+      "refactoring",
+      "extract",
+      "method"
+    ]
+  },
+  "java-refactoring-remove-parameter": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "java",
+      "refactoring",
+      "remove",
+      "parameter"
+    ]
+  },
+  "java-springboot": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "java",
+      "springboot"
+    ]
+  },
+  "javascript-testing-patterns": {
+    "categories": [
+      "testing",
+      "methodology"
+    ],
+    "tags": [
+      "javascript",
+      "testing",
+      "patterns"
+    ]
+  },
+  "javascript-typescript-jest": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "javascript",
+      "typescript",
+      "jest"
+    ]
+  },
+  "jeo": {
+    "categories": [
+      "web",
+      "ai-engineering"
+    ],
+    "tags": [
+      "jeo"
+    ]
+  },
+  "jobs-to-be-done": {
+    "categories": [
+      "product",
+      "methodology"
+    ],
+    "tags": [
+      "jtbd"
+    ]
+  },
+  "jwt-authentication": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "jwt"
+    ]
+  },
+  "k8s-manifest-generator": {
+    "categories": [
+      "devops",
+      "security",
+      "ai-engineering"
+    ],
+    "tags": [
+      "k8s",
+      "manifest",
+      "generator"
+    ]
+  },
+  "k8s-security-policies": {
+    "categories": [
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "k8s",
+      "security",
+      "policies"
+    ]
+  },
+  "kotlin-mcp-server-generator": {
+    "categories": [
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "kotlin",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "kotlin-springboot": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "kotlin",
+      "springboot"
+    ]
+  },
+  "kpi-dashboard-design": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "kpi",
+      "dashboard",
+      "design"
+    ]
+  },
+  "kubernetes-deployment-manifests": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "kubernetes"
+    ]
+  },
+  "langchain-architecture": {
+    "categories": [
+      "web",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "langchain",
+      "architecture"
+    ]
+  },
+  "langchain-basics": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm",
+      "langchain",
+      "openai"
+    ]
+  },
+  "langsmith": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "langsmith"
+    ]
+  },
+  "lean-startup": {
+    "categories": [
+      "product",
+      "methodology"
+    ],
+    "tags": [
+      "mvp",
+      "pivot"
+    ]
+  },
+  "lean-ux": {
+    "categories": [
+      "ux",
+      "methodology"
+    ],
+    "tags": [
+      "lean"
+    ]
+  },
+  "legacy-circuit-mockups": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "legacy",
+      "circuit",
+      "mockups"
+    ]
+  },
+  "linkedin-carousel": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "linkedin",
+      "carousel",
+      "content-creation"
+    ]
+  },
+  "linkerd-patterns": {
+    "categories": [
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "linkerd",
+      "patterns"
+    ]
+  },
+  "llm-evaluation": {
+    "categories": [
+      "testing",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "llm",
+      "evaluation"
+    ]
+  },
+  "llm-monitoring-dashboard": {
+    "categories": [
+      "web",
+      "ai-engineering"
+    ],
+    "tags": [
+      "llm",
+      "monitoring",
+      "dashboard"
+    ]
+  },
+  "local-llm-running-ollama": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm",
+      "ollama"
+    ]
+  },
+  "log-aggregation-elk": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "logging"
+    ]
+  },
+  "log-analysis": {
+    "categories": [
+      "devops",
+      "security",
+      "database"
+    ],
+    "tags": [
+      "log",
+      "analysis"
+    ]
+  },
+  "logger-configuration-winston": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "datadog",
+      "logging"
+    ]
+  },
+  "looker-studio-bigquery": {
+    "categories": [
+      "database",
+      "performance",
+      "design"
+    ],
+    "tags": [
+      "looker",
+      "studio",
+      "bigquery"
+    ]
+  },
+  "made-to-stick": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "messaging"
+    ]
+  },
+  "make-repo-contribution": {
+    "categories": [
+      "web",
+      "documentation"
+    ],
+    "tags": [
+      "make",
+      "repo",
+      "contribution"
+    ]
+  },
+  "make-skill-template": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "make",
+      "skill",
+      "template"
+    ]
+  },
+  "managing-technical-debt": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality"
+    ]
+  },
+  "markdown-to-html": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "markdown",
+      "html"
+    ]
+  },
+  "market-sizing-analysis": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "market",
+      "sizing",
+      "analysis"
+    ]
+  },
+  "marketing-automation": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "marketing",
+      "automation"
+    ]
+  },
+  "marketing-skills-collection": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "marketing",
+      "skills",
+      "collection"
+    ]
+  },
+  "mcp-builder": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "mcp",
+      "builder"
+    ]
+  },
+  "mcp-cli": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "mcp",
+      "cli"
+    ]
+  },
+  "mcp-configure": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "mcp",
+      "configure"
+    ]
+  },
+  "mcp-copilot-studio-server-generator": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "mcp",
+      "copilot",
+      "studio",
+      "server"
+    ]
+  },
+  "mcp-create-adaptive-cards": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "mcp",
+      "create",
+      "adaptive",
+      "cards"
+    ]
+  },
+  "mcp-create-declarative-agent": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "mcp",
+      "create",
+      "declarative",
+      "agent"
+    ]
+  },
+  "mcp-deploy-manage-agents": {
+    "categories": [
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "mcp",
+      "deploy",
+      "manage",
+      "agents"
+    ]
+  },
+  "meeting-minutes": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "meeting",
+      "minutes"
+    ]
+  },
+  "memory-forensics": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "memory",
+      "forensics"
+    ]
+  },
+  "memory-merger": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "memory",
+      "merger"
+    ]
+  },
+  "memory-safety-patterns": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "memory",
+      "safety",
+      "patterns"
+    ]
+  },
+  "mentoring-juniors": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "mentoring",
+      "juniors"
+    ]
+  },
+  "message-queue-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "mfa-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "authentication"
+    ]
+  },
+  "microinteractions": {
+    "categories": [
+      "ux",
+      "web"
+    ],
+    "tags": [
+      "animations"
+    ]
+  },
+  "microservice-communication": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "grpc"
+    ]
+  },
+  "microservice-spec": {
+    "categories": [
+      "architecture",
+      "devops"
+    ],
+    "tags": [
+      "microservices"
+    ]
+  },
+  "microservices-patterns": {
+    "categories": [
+      "web",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "microservices",
+      "patterns"
+    ]
+  },
+  "microservices-vs-monolith-decision": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "microsoft-agent-framework": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "microsoft",
+      "agent",
+      "framework"
+    ]
+  },
+  "microsoft-code-reference": {
+    "categories": [
+      "devops",
+      "documentation"
+    ],
+    "tags": [
+      "microsoft",
+      "code",
+      "reference"
+    ]
+  },
+  "microsoft-docs": {
+    "categories": [
+      "devops",
+      "methodology",
+      "documentation"
+    ],
+    "tags": [
+      "microsoft",
+      "docs"
+    ]
+  },
+  "microsoft-skill-creator": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "microsoft",
+      "skill",
+      "creator"
+    ]
+  },
+  "migrating-oracle-to-postgres-stored-procedures": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "migrating",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "mkdocs-translations": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "mkdocs",
+      "translations"
+    ]
+  },
+  "ml-pipeline-workflow": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "pipeline",
+      "workflow"
+    ]
+  },
+  "mobile-android-design": {
+    "categories": [
+      "web",
+      "design",
+      "mobile"
+    ],
+    "tags": [
+      "mobile",
+      "android",
+      "design"
+    ]
+  },
+  "mobile-device-features": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react",
+      "expo"
+    ]
+  },
+  "mobile-first-design": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "css"
+    ]
+  },
+  "mobile-ios-design": {
+    "categories": [
+      "web",
+      "devops",
+      "design"
+    ],
+    "tags": [
+      "mobile",
+      "ios",
+      "design"
+    ]
+  },
+  "mobile-ui-styling-nativewind": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react",
+      "tailwind",
+      "css"
+    ]
+  },
+  "model-recommendation": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "model",
+      "recommendation"
+    ]
+  },
+  "modern-javascript-patterns": {
+    "categories": [
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "modern",
+      "javascript",
+      "patterns"
+    ]
+  },
+  "mom-test": {
+    "categories": [
+      "product",
+      "methodology"
+    ],
+    "tags": [
+      "user-research",
+      "interviews"
+    ]
+  },
+  "mongodb-aggregation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "mongodb"
+    ]
+  },
+  "monitoring-observability": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "monitoring",
+      "observability"
+    ]
+  },
+  "monitoring-with-datadog": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "docker",
+      "kubernetes",
+      "datadog"
+    ]
+  },
+  "monorepo-management": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "monorepo",
+      "management"
+    ]
+  },
+  "monorepo-setup-turborepo": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality",
+      "monorepo"
+    ]
+  },
+  "msstore-cli": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "msstore",
+      "cli"
+    ]
+  },
+  "mtls-configuration": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mtls",
+      "configuration"
+    ]
+  },
+  "multi-cloud-architecture": {
+    "categories": [
+      "web",
+      "devops",
+      "architecture"
+    ],
+    "tags": [
+      "multi",
+      "cloud",
+      "architecture"
+    ]
+  },
+  "multi-reviewer-patterns": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "multi",
+      "reviewer",
+      "patterns"
+    ]
+  },
+  "multi-stage-dockerfile": {
+    "categories": [
+      "devops",
+      "documentation"
+    ],
+    "tags": [
+      "multi",
+      "stage",
+      "dockerfile"
+    ]
+  },
+  "multi-tenancy-architecture": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "my-issues": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "issues"
+    ]
+  },
+  "my-pull-requests": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "pull",
+      "requests"
+    ]
+  },
+  "nano-banana-pro-openrouter": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "nano",
+      "banana",
+      "pro",
+      "openrouter"
+    ]
+  },
+  "napkin": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "napkin"
+    ]
+  },
+  "negotiation": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "negotiation"
+    ]
+  },
+  "neon-postgres": {
+    "categories": [
+      "web",
+      "security",
+      "database"
+    ],
+    "tags": [
+      "neon",
+      "postgres"
+    ]
+  },
+  "neon-postgres-egress-optimizer": {
+    "categories": [
+      "devops",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "neon",
+      "postgres",
+      "egress",
+      "optimizer"
+    ]
+  },
+  "next-intl-add-language": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "next",
+      "intl",
+      "add",
+      "language"
+    ]
+  },
+  "nextjs-app-router": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "nextjs"
+    ]
+  },
+  "nextjs-app-router-patterns": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "nextjs",
+      "app",
+      "router",
+      "patterns"
+    ]
+  },
+  "nft-standards": {
+    "categories": [
+      "web",
+      "methodology"
+    ],
+    "tags": [
+      "nft",
+      "standards"
+    ]
+  },
+  "nginx-reverse-proxy-setup": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "nginx",
+      "expo"
+    ]
+  },
+  "nodejs-backend-patterns": {
+    "categories": [
+      "web",
+      "security",
+      "architecture"
+    ],
+    "tags": [
+      "nodejs",
+      "backend",
+      "patterns"
+    ]
+  },
+  "nodejs-streams": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "noob-mode": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "noob",
+      "mode"
+    ]
+  },
+  "npm-git-install": {
+    "categories": [
+      "testing",
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "npm",
+      "git",
+      "install"
+    ]
+  },
+  "npm-scripts-automation": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality"
+    ]
+  },
+  "nuget-manager": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "nuget",
+      "manager"
+    ]
+  },
+  "nx-workspace-patterns": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "workspace",
+      "patterns"
+    ]
+  },
+  "oauth2-provider-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "oauth"
+    ]
+  },
+  "obviously-awesome": {
+    "categories": [
+      "marketing",
+      "product"
+    ],
+    "tags": [
+      "positioning"
+    ]
+  },
+  "offline-first-mobile-architecture": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react",
+      "expo"
+    ]
+  },
+  "ohmg": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "ohmg"
+    ]
+  },
+  "omc": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "omc"
+    ]
+  },
+  "omx": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "omx"
+    ]
+  },
+  "on-call-handoff-patterns": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "call",
+      "handoff",
+      "patterns"
+    ]
+  },
+  "one-page-marketing": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "planning"
+    ]
+  },
+  "oo-component-documentation": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "component",
+      "documentation"
+    ]
+  },
+  "openai-api-integration": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm",
+      "typescript",
+      "openai"
+    ]
+  },
+  "openapi-spec-generation": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "openapi",
+      "spec",
+      "generation"
+    ]
+  },
+  "openapi-to-application-code": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "openapi",
+      "application",
+      "code"
+    ]
+  },
+  "opencontext": {
+    "categories": [
+      "ai-engineering",
+      "methodology",
+      "documentation"
+    ],
+    "tags": [
+      "opencontext"
+    ]
+  },
+  "owasp-top-10-mitigation": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "owasp"
+    ]
+  },
+  "pagination-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "parallel-debugging": {
+    "categories": [
+      "database",
+      "methodology"
+    ],
+    "tags": [
+      "parallel",
+      "debugging"
+    ]
+  },
+  "parallel-feature-development": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "parallel",
+      "feature",
+      "development"
+    ]
+  },
+  "pattern-detection": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "pattern",
+      "detection"
+    ]
+  },
+  "paypal-integration": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "paypal",
+      "integration"
+    ]
+  },
+  "pci-compliance": {
+    "categories": [
+      "web",
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "pci",
+      "compliance"
+    ]
+  },
+  "pdf": {
+    "categories": [
+      "security",
+      "database"
+    ],
+    "tags": [
+      "pdf"
+    ]
+  },
+  "pdftk-server": {
+    "categories": [
+      "security",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "pdftk",
+      "server"
+    ]
+  },
+  "penpot-uiux-design": {
+    "categories": [
+      "web",
+      "database",
+      "design"
+    ],
+    "tags": [
+      "penpot",
+      "uiux",
+      "design"
+    ]
+  },
+  "performance-optimization": {
+    "categories": [
+      "performance"
+    ],
+    "tags": [
+      "profiling"
+    ]
+  },
+  "php-mcp-server-generator": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "php",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "planning-oracle-to-postgres-migration-integration-testing": {
+    "categories": [
+      "testing",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "planning",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "plannotator": {
+    "categories": [
+      "web",
+      "ai-engineering"
+    ],
+    "tags": [
+      "plannotator"
+    ]
+  },
+  "plantuml-ascii": {
+    "categories": [
+      "devops",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "plantuml",
+      "ascii"
+    ]
+  },
+  "playwright-automation-fill-in-form": {
+    "categories": [
+      "testing",
+      "database"
+    ],
+    "tags": [
+      "playwright",
+      "automation",
+      "fill"
+    ]
+  },
+  "playwright-e2e-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "e2e",
+      "playwright",
+      "typescript",
+      "browser-automation"
+    ]
+  },
+  "playwright-explore-website": {
+    "categories": [
+      "web",
+      "testing"
+    ],
+    "tags": [
+      "playwright",
+      "explore",
+      "website"
+    ]
+  },
+  "playwright-generate-test": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "playwright",
+      "generate",
+      "test"
+    ]
+  },
+  "playwright-regression-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "regression-testing",
+      "playwright",
+      "ci-cd",
+      "test-sharding"
+    ]
+  },
+  "playwriter": {
+    "categories": [
+      "web",
+      "testing",
+      "security"
+    ],
+    "tags": [
+      "playwriter"
+    ]
+  },
+  "polyglot-test-agent": {
+    "categories": [
+      "testing",
+      "ai-engineering"
+    ],
+    "tags": [
+      "polyglot",
+      "test",
+      "agent"
+    ]
+  },
+  "postgresql-code-review": {
+    "categories": [
+      "testing",
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "postgresql",
+      "code",
+      "review"
+    ]
+  },
+  "postgresql-indexing": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "postgresql"
+    ]
+  },
+  "postgresql-optimization": {
+    "categories": [
+      "testing",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "postgresql",
+      "optimization"
+    ]
+  },
+  "postgresql-table-design": {
+    "categories": [
+      "testing",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "postgresql",
+      "table",
+      "design"
+    ]
+  },
+  "postmortem-writing": {
+    "categories": [
+      "devops",
+      "documentation"
+    ],
+    "tags": [
+      "postmortem",
+      "writing"
+    ]
+  },
+  "power-apps-code-app-scaffold": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "power",
+      "apps",
+      "code",
+      "app"
+    ]
+  },
+  "power-bi-dax-optimization": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "performance"
+    ],
+    "tags": [
+      "power",
+      "dax",
+      "optimization"
+    ]
+  },
+  "power-bi-model-design-review": {
+    "categories": [
+      "architecture",
+      "ai-engineering",
+      "performance"
+    ],
+    "tags": [
+      "power",
+      "model",
+      "design"
+    ]
+  },
+  "power-bi-performance-troubleshooting": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "performance"
+    ],
+    "tags": [
+      "power",
+      "performance",
+      "troubleshooting"
+    ]
+  },
+  "power-bi-report-design-consultation": {
+    "categories": [
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "power",
+      "report",
+      "design"
+    ]
+  },
+  "power-platform-mcp-connector-suite": {
+    "categories": [
+      "web",
+      "database"
+    ],
+    "tags": [
+      "power",
+      "platform",
+      "mcp",
+      "connector"
+    ]
+  },
+  "powerbi-modeling": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "powerbi",
+      "modeling"
+    ]
+  },
+  "pptx": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "pptx"
+    ]
+  },
+  "pragmatic-programmer": {
+    "categories": [
+      "methodology",
+      "design"
+    ],
+    "tags": [
+      "best-practices"
+    ]
+  },
+  "prd": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "prd"
+    ]
+  },
+  "predictable-revenue": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "sales"
+    ]
+  },
+  "presentation-builder": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "mobile"
+    ],
+    "tags": [
+      "presentation",
+      "builder"
+    ]
+  },
+  "prisma-schema-design": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "typescript",
+      "postgresql",
+      "prisma"
+    ]
+  },
+  "project-onboarding-guide": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs"
+    ]
+  },
+  "project-workflow-analysis-blueprint-generator": {
+    "categories": [
+      "web",
+      "testing",
+      "architecture"
+    ],
+    "tags": [
+      "project",
+      "workflow",
+      "analysis",
+      "blueprint"
+    ]
+  },
+  "projection-patterns": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "projection",
+      "patterns"
+    ]
+  },
+  "prometheus-configuration": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "prometheus",
+      "configuration"
+    ]
+  },
+  "prometheus-grafana-monitoring": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "express",
+      "prometheus",
+      "grafana",
+      "expo"
+    ]
+  },
+  "prompt-builder": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "prompt",
+      "builder"
+    ]
+  },
+  "prompt-engineering-basics": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm"
+    ]
+  },
+  "prompt-engineering-patterns": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "performance"
+    ],
+    "tags": [
+      "prompt",
+      "engineering",
+      "patterns"
+    ]
+  },
+  "prompt-repetition": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "performance"
+    ],
+    "tags": [
+      "prompt",
+      "repetition"
+    ]
+  },
+  "protocol-reverse-engineering": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "protocol",
+      "reverse",
+      "engineering"
+    ]
+  },
+  "push-notifications-setup": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "expo"
+    ]
+  },
+  "pwa-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "pwa"
+    ]
+  },
+  "pytest-coverage": {
+    "categories": [
+      "testing",
+      "ai-engineering"
+    ],
+    "tags": [
+      "pytest",
+      "coverage"
+    ]
+  },
+  "python-anti-patterns": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "python",
+      "anti",
+      "patterns"
+    ]
+  },
+  "python-background-jobs": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "python",
+      "background",
+      "jobs"
+    ]
+  },
+  "python-code-style": {
+    "categories": [
+      "database",
+      "documentation"
+    ],
+    "tags": [
+      "python",
+      "code",
+      "style"
+    ]
+  },
+  "python-configuration": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "python",
+      "configuration"
+    ]
+  },
+  "python-design-patterns": {
+    "categories": [
+      "devops",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "python",
+      "design",
+      "patterns"
+    ]
+  },
+  "python-error-handling": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "python",
+      "error",
+      "handling"
+    ]
+  },
+  "python-mcp-server-generator": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "python",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "python-observability": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "python",
+      "observability"
+    ]
+  },
+  "python-packaging": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "python",
+      "packaging"
+    ]
+  },
+  "python-performance-optimization": {
+    "categories": [
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "python",
+      "performance",
+      "optimization"
+    ]
+  },
+  "python-project-setup": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "python",
+      "uv",
+      "project-setup"
+    ]
+  },
+  "python-project-structure": {
+    "categories": [
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "python",
+      "project",
+      "structure"
+    ]
+  },
+  "python-resilience": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "mobile"
+    ],
+    "tags": [
+      "python",
+      "resilience"
+    ]
+  },
+  "python-resource-management": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "python",
+      "resource",
+      "management"
+    ]
+  },
+  "python-testing-patterns": {
+    "categories": [
+      "web",
+      "testing"
+    ],
+    "tags": [
+      "python",
+      "testing",
+      "patterns"
+    ]
+  },
+  "python-type-safety": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "python",
+      "type",
+      "safety"
+    ]
+  },
+  "qa-manual-istqb": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "qa",
+      "istqb",
+      "test-planning",
+      "manual-testing"
+    ]
+  },
+  "qa-test-planner": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "qa",
+      "test-planning",
+      "test-cases",
+      "automation"
+    ]
+  },
+  "quasi-coder": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "quasi",
+      "coder"
+    ]
+  },
+  "rag-implementation": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "rag",
+      "implementation"
+    ]
+  },
+  "rag-system-architecture": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm"
+    ]
+  },
+  "ralph": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "ralph"
+    ]
+  },
+  "ralphmode": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ralphmode"
+    ]
+  },
+  "rate-limiting-redis": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "redis",
+      "expo"
+    ]
+  },
+  "rbac-implementation": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "rbac"
+    ]
+  },
+  "react-best-practices": {
+    "categories": [
+      "web",
+      "database",
+      "methodology"
+    ],
+    "tags": [
+      "react"
+    ]
+  },
+  "react-component-optimization": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "react-context-vs-zustand": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "expo"
+    ]
+  },
+  "react-grab": {
+    "categories": [
+      "web",
+      "testing",
+      "ai-engineering"
+    ],
+    "tags": [
+      "react",
+      "grab"
+    ]
+  },
+  "react-modernization": {
+    "categories": [
+      "web",
+      "testing"
+    ],
+    "tags": [
+      "react",
+      "modernization"
+    ]
+  },
+  "react-native-architecture": {
+    "categories": [
+      "web",
+      "architecture",
+      "database"
+    ],
+    "tags": [
+      "react",
+      "native",
+      "architecture"
+    ]
+  },
+  "react-native-design": {
+    "categories": [
+      "web",
+      "database",
+      "design"
+    ],
+    "tags": [
+      "react",
+      "native",
+      "design"
+    ]
+  },
+  "react-native-navigation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react",
+      "expo"
+    ]
+  },
+  "react-native-reanimated": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react"
+    ]
+  },
+  "react-native-setup-expo": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "mobile",
+      "react-native",
+      "react",
+      "typescript",
+      "expo"
+    ]
+  },
+  "react-state-management": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "react",
+      "state",
+      "management"
+    ]
+  },
+  "react-testing-library": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "readme-blueprint-generator": {
+    "categories": [
+      "testing",
+      "architecture",
+      "database"
+    ],
+    "tags": [
+      "readme",
+      "blueprint",
+      "generator"
+    ]
+  },
+  "redis-data-structures": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "redis"
+    ]
+  },
+  "refactor": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "refactor"
+    ]
+  },
+  "refactor-method-complexity-reduce": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "refactor",
+      "method",
+      "complexity",
+      "reduce"
+    ]
+  },
+  "refactor-plan": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "refactor",
+      "plan"
+    ]
+  },
+  "refactoring-legacy-controller": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "refactoring-patterns": {
+    "categories": [
+      "refactoring",
+      "design"
+    ],
+    "tags": [
+      "patterns"
+    ]
+  },
+  "refactoring-ui": {
+    "categories": [
+      "ux",
+      "web"
+    ],
+    "tags": [
+      "ui",
+      "css"
+    ]
+  },
+  "release-it": {
+    "categories": [
+      "devops",
+      "architecture"
+    ],
+    "tags": [
+      "resilience",
+      "deployment"
+    ]
+  },
+  "remember": {
+    "categories": [
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "remember"
+    ]
+  },
+  "remember-interactive-programming": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "remember",
+      "interactive",
+      "programming"
+    ]
+  },
+  "remotion": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "remotion"
+    ]
+  },
+  "remotion-video-production": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "remotion",
+      "video",
+      "production"
+    ]
+  },
+  "repo-story-time": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "repo",
+      "story",
+      "time"
+    ]
+  },
+  "responsive-design": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "responsive",
+      "design"
+    ]
+  },
+  "responsive-ui-design-tailwind": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "tailwind",
+      "css"
+    ]
+  },
+  "rest-vs-graphql-selection": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "graphql"
+    ]
+  },
+  "review-and-refactor": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "review",
+      "refactor"
+    ]
+  },
+  "reviewing-oracle-to-postgres-migration": {
+    "categories": [
+      "testing",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "reviewing",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "risk-metrics-calculation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "risk",
+      "metrics",
+      "calculation"
+    ]
+  },
+  "route-protection-react-router": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "redux"
+    ]
+  },
+  "ruby-mcp-server-generator": {
+    "categories": [
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "ruby",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "rust-async-patterns": {
+    "categories": [
+      "web",
+      "ai-engineering"
+    ],
+    "tags": [
+      "rust",
+      "async",
+      "patterns"
+    ]
+  },
+  "rust-mcp-server-generator": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "rust",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "saga-orchestration": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "saga",
+      "orchestration"
+    ]
+  },
+  "sandbox-npm-install": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "sandbox",
+      "npm",
+      "install"
+    ]
+  },
+  "sast-configuration": {
+    "categories": [
+      "testing",
+      "security"
+    ],
+    "tags": [
+      "sast",
+      "configuration"
+    ]
+  },
+  "scaffolding-oracle-to-postgres-migration-test-project": {
+    "categories": [
+      "testing",
+      "database"
+    ],
+    "tags": [
+      "scaffolding",
+      "oracle",
+      "postgres"
+    ]
+  },
+  "scaling-strategies-horizontal-vs-vertical": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "scorecard-marketing": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "measurement"
+    ]
+  },
+  "scoutqa-test": {
+    "categories": [
+      "web",
+      "testing",
+      "design"
+    ],
+    "tags": [
+      "scoutqa",
+      "test"
+    ]
+  },
+  "screen-reader-testing": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "screen",
+      "reader",
+      "testing"
+    ]
+  },
+  "secret-scanning-ci-cd": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security"
+    ]
+  },
+  "secrets-management": {
+    "categories": [
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "secrets",
+      "management"
+    ]
+  },
+  "secure-env-var-handling": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security"
+    ]
+  },
+  "security-best-practices": {
+    "categories": [
+      "web",
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "security"
+    ]
+  },
+  "security-requirement-extraction": {
+    "categories": [
+      "web",
+      "testing",
+      "security"
+    ],
+    "tags": [
+      "security",
+      "requirement",
+      "extraction"
+    ]
+  },
+  "semantic-kernel": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "semantic",
+      "kernel"
+    ]
+  },
+  "semantic-versioning-strategy": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "git",
+      "code-quality"
+    ]
+  },
+  "sentry-error-tracking": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "sentry"
+    ]
+  },
+  "serverless-architecture-considerations": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns",
+      "aws",
+      "aws-lambda"
+    ]
+  },
+  "serverless-framework-setup": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "aws"
+    ]
+  },
+  "service-mesh-observability": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "service",
+      "mesh",
+      "observability"
+    ]
+  },
+  "session-management-best-practices": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "redis",
+      "jwt",
+      "csrf",
+      "xss"
+    ]
+  },
+  "shadcn-ui": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "shadcn"
+    ]
+  },
+  "shellcheck-configuration": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "shellcheck",
+      "configuration"
+    ]
+  },
+  "shuffle-json-data": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "shuffle",
+      "json",
+      "data"
+    ]
+  },
+  "similarity-search-patterns": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "similarity",
+      "search",
+      "patterns"
+    ]
+  },
+  "skill-creator": {
+    "categories": [
+      "testing",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "skill",
+      "creator"
+    ]
+  },
+  "skill-standardization": {
+    "categories": [
+      "testing",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "skill",
+      "standardization"
+    ]
+  },
+  "slack-gif-creator": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "slack",
+      "gif",
+      "creator"
+    ]
+  },
+  "slo-implementation": {
+    "categories": [
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "slo",
+      "implementation"
+    ]
+  },
+  "snowflake-semanticview": {
+    "categories": [
+      "web",
+      "ai-engineering"
+    ],
+    "tags": [
+      "snowflake",
+      "semanticview"
+    ]
+  },
+  "soft-delete-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "software-design-philosophy": {
+    "categories": [
+      "design"
+    ],
+    "tags": [
+      "simplicity"
+    ]
+  },
+  "solidity-security": {
+    "categories": [
+      "security",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "solidity",
+      "security"
+    ]
+  },
+  "spark-optimization": {
+    "categories": [
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "spark",
+      "optimization"
+    ]
+  },
+  "speech-to-text-whisper": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm",
+      "openai",
+      "speech-to-text"
+    ]
+  },
+  "sponsor-finder": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "sponsor",
+      "finder"
+    ]
+  },
+  "spring-boot-scaffold": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "java",
+      "spring"
+    ]
+  },
+  "sprint-retrospective": {
+    "categories": [
+      "testing",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "sprint",
+      "retrospective"
+    ]
+  },
+  "sql-code-review": {
+    "categories": [
+      "security",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "sql",
+      "code",
+      "review"
+    ]
+  },
+  "sql-jpa": {
+    "categories": [
+      "database"
+    ],
+    "tags": [
+      "java",
+      "sql",
+      "jpa"
+    ]
+  },
+  "sql-optimization": {
+    "categories": [
+      "web",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "sql",
+      "optimization"
+    ]
+  },
+  "sql-optimization-patterns": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "performance"
+    ],
+    "tags": [
+      "sql",
+      "optimization",
+      "patterns"
+    ]
+  },
+  "sql-query-optimization": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "ssl-tls-certbot-setup": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "nginx",
+      "ssl"
+    ]
+  },
+  "ssr-vs-csr-decision-matrix": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "stack-selection-criteria": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "design-patterns"
+    ]
+  },
+  "standup-meeting": {
+    "categories": [
+      "devops",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "standup",
+      "meeting"
+    ]
+  },
+  "startup-financial-modeling": {
+    "categories": [
+      "web",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "startup",
+      "financial",
+      "modeling"
+    ]
+  },
+  "startup-metrics-framework": {
+    "categories": [
+      "web",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "startup",
+      "metrics",
+      "framework"
+    ]
+  },
+  "state-management": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "state",
+      "management"
+    ]
+  },
+  "stitch-design": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "stitch",
+      "design"
+    ]
+  },
+  "stitch-loop": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "stitch",
+      "loop"
+    ]
+  },
+  "storybook-component-documentation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "storybook"
+    ]
+  },
+  "storybrand-messaging": {
+    "categories": [
+      "marketing"
+    ],
+    "tags": [
+      "branding",
+      "messaging"
+    ]
+  },
+  "stride-analysis-patterns": {
+    "categories": [
+      "security",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "stride",
+      "analysis",
+      "patterns"
+    ]
+  },
+  "stripe-integration": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "stripe",
+      "integration"
+    ]
+  },
+  "structured-autonomy-generate": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "structured",
+      "autonomy",
+      "generate"
+    ]
+  },
+  "structured-autonomy-implement": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "structured",
+      "autonomy",
+      "implement"
+    ]
+  },
+  "structured-autonomy-plan": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "structured",
+      "autonomy",
+      "plan"
+    ]
+  },
+  "suggest-awesome-github-copilot-agents": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "suggest",
+      "awesome",
+      "github",
+      "copilot"
+    ]
+  },
+  "suggest-awesome-github-copilot-instructions": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "suggest",
+      "awesome",
+      "github",
+      "copilot"
+    ]
+  },
+  "suggest-awesome-github-copilot-skills": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "suggest",
+      "awesome",
+      "github",
+      "copilot"
+    ]
+  },
+  "survey": {
+    "categories": [
+      "database",
+      "methodology"
+    ],
+    "tags": [
+      "survey"
+    ]
+  },
+  "svg-animation-techniques": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react",
+      "svg",
+      "css"
+    ]
+  },
+  "swagger-documentation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "express",
+      "openapi",
+      "expo"
+    ]
+  },
+  "swift-mcp-server-generator": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "mobile"
+    ],
+    "tags": [
+      "swift",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "system-design": {
+    "categories": [
+      "architecture"
+    ],
+    "tags": [
+      "distributed-systems"
+    ]
+  },
+  "system-environment-setup": {
+    "categories": [
+      "devops",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "system",
+      "environment",
+      "setup"
+    ]
+  },
+  "tailwind-design-system": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "tailwind",
+      "design",
+      "system"
+    ]
+  },
+  "task-coordination-strategies": {
+    "categories": [
+      "devops",
+      "design"
+    ],
+    "tags": [
+      "task",
+      "coordination",
+      "strategies"
+    ]
+  },
+  "task-estimation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "task",
+      "estimation"
+    ]
+  },
+  "task-planning": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "task",
+      "planning"
+    ]
+  },
+  "team-communication-protocols": {
+    "categories": [
+      "database"
+    ],
+    "tags": [
+      "team",
+      "communication",
+      "protocols"
+    ]
+  },
+  "team-composition-analysis": {
+    "categories": [
+      "web",
+      "design"
+    ],
+    "tags": [
+      "team",
+      "composition",
+      "analysis"
+    ]
+  },
+  "team-composition-patterns": {
+    "categories": [
+      "devops",
+      "methodology",
+      "design"
+    ],
+    "tags": [
+      "team",
+      "composition",
+      "patterns"
+    ]
+  },
+  "technical-writing": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "technical",
+      "writing"
+    ]
+  },
+  "technology-stack-blueprint-generator": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "technology",
+      "stack",
+      "blueprint",
+      "generator"
+    ]
+  },
+  "template-skill": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "template",
+      "skill"
+    ]
+  },
+  "temporal-python-testing": {
+    "categories": [
+      "testing",
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "temporal",
+      "python",
+      "testing"
+    ]
+  },
+  "terraform-advanced": {
+    "categories": [
+      "devops"
+    ],
+    "tags": [
+      "infrastructure",
+      "terraform"
+    ]
+  },
+  "terraform-azurerm-set-diff-analyzer": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "terraform",
+      "azurerm",
+      "set",
+      "diff"
+    ]
+  },
+  "terraform-module-library": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "terraform",
+      "module",
+      "library"
+    ]
+  },
+  "testing-strategies": {
+    "categories": [
+      "testing",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "testing",
+      "strategies"
+    ]
+  },
+  "theme-factory": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "theme",
+      "factory"
+    ]
+  },
+  "threat-mitigation-mapping": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "threat",
+      "mitigation",
+      "mapping"
+    ]
+  },
+  "tldr-prompt": {
+    "categories": [
+      "ai-engineering",
+      "methodology",
+      "documentation"
+    ],
+    "tags": [
+      "tldr",
+      "prompt"
+    ]
+  },
+  "top-design": {
+    "categories": [
+      "ux",
+      "design"
+    ],
+    "tags": [
+      "design-thinking"
+    ]
+  },
+  "track-management": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "track",
+      "management"
+    ]
+  },
+  "traction-eos": {
+    "categories": [
+      "product",
+      "methodology"
+    ],
+    "tags": [
+      "traction"
+    ]
+  },
+  "transaction-management": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "transloadit-media-processing": {
+    "categories": [
+      "database",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "transloadit",
+      "media",
+      "processing"
+    ]
+  },
+  "turborepo-caching": {
+    "categories": [
+      "web",
+      "devops"
+    ],
+    "tags": [
+      "turborepo",
+      "caching"
+    ]
+  },
+  "typeorm-relations": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "typescript",
+      "typeorm",
+      "expo"
+    ]
+  },
+  "typescript-advanced-types": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "typescript",
+      "advanced",
+      "types"
+    ]
+  },
+  "typescript-mcp-server-generator": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "typescript",
+      "mcp",
+      "server",
+      "generator"
+    ]
+  },
+  "typespec-api-operations": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "typespec",
+      "api",
+      "operations"
+    ]
+  },
+  "typespec-create-agent": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "typespec",
+      "create",
+      "agent"
+    ]
+  },
+  "typespec-create-api-plugin": {
+    "categories": [
+      "testing",
+      "security"
+    ],
+    "tags": [
+      "typespec",
+      "create",
+      "api",
+      "plugin"
+    ]
+  },
+  "ui-component-patterns": {
+    "categories": [
+      "web",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "component",
+      "patterns"
+    ]
+  },
+  "unit-test-generation-jest": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "testing",
+      "jest"
+    ]
+  },
+  "unit-test-vue-pinia": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "unit",
+      "test",
+      "vue",
+      "pinia"
+    ]
+  },
+  "unit-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "tdd",
+      "junit"
+    ]
+  },
+  "unity-ecs-patterns": {
+    "categories": [
+      "web",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "unity",
+      "ecs",
+      "patterns"
+    ]
+  },
+  "update-avm-modules-in-bicep": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "update",
+      "avm",
+      "modules"
+    ]
+  },
+  "update-implementation-plan": {
+    "categories": [
+      "web",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "update",
+      "implementation",
+      "plan"
+    ]
+  },
+  "update-llms": {
+    "categories": [
+      "testing",
+      "devops",
+      "ai-engineering"
+    ],
+    "tags": [
+      "update",
+      "llms"
+    ]
+  },
+  "update-markdown-file-index": {
+    "categories": [
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "update",
+      "markdown",
+      "file",
+      "index"
+    ]
+  },
+  "update-specification": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "update",
+      "specification"
+    ]
+  },
+  "user-guide-writing": {
+    "categories": [
+      "web",
+      "documentation"
+    ],
+    "tags": [
+      "user",
+      "guide",
+      "writing"
+    ]
+  },
+  "user-manual-creation": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs"
+    ]
+  },
+  "uv-package-manager": {
+    "categories": [
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "package",
+      "manager"
+    ]
+  },
+  "ux-heuristics": {
+    "categories": [
+      "ux"
+    ],
+    "tags": [
+      "usability",
+      "heuristics"
+    ]
+  },
+  "vector-database-setup": {
+    "categories": [
+      "ai-engineering"
+    ],
+    "tags": [
+      "ai",
+      "llm"
+    ]
+  },
+  "vector-index-tuning": {
+    "categories": [
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "vector",
+      "index",
+      "tuning"
+    ]
+  },
+  "vercel-composition-patterns": {
+    "categories": [
+      "web",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "vercel",
+      "composition",
+      "patterns"
+    ]
+  },
+  "vercel-deploy": {
+    "categories": [
+      "web",
+      "devops",
+      "security"
+    ],
+    "tags": [
+      "vercel",
+      "deploy"
+    ]
+  },
+  "vercel-react-best-practices": {
+    "categories": [
+      "web",
+      "database",
+      "methodology"
+    ],
+    "tags": [
+      "vercel",
+      "react"
+    ]
+  },
+  "vercel-react-native-skills": {
+    "categories": [
+      "web",
+      "database",
+      "performance"
+    ],
+    "tags": [
+      "vercel",
+      "react",
+      "native",
+      "skills"
+    ]
+  },
+  "vibe-kanban": {
+    "categories": [
+      "ai-engineering",
+      "methodology"
+    ],
+    "tags": [
+      "vibe",
+      "kanban"
+    ]
+  },
+  "video-production": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "video",
+      "production"
+    ]
+  },
+  "visual-design-foundations": {
+    "categories": [
+      "web",
+      "devops",
+      "design"
+    ],
+    "tags": [
+      "visual",
+      "design",
+      "foundations"
+    ]
+  },
+  "vscode-ext-commands": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "vscode",
+      "ext",
+      "commands"
+    ]
+  },
+  "vscode-ext-localization": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "vscode",
+      "ext",
+      "localization"
+    ]
+  },
+  "wcag-audit-patterns": {
+    "categories": [
+      "web",
+      "testing",
+      "design"
+    ],
+    "tags": [
+      "wcag",
+      "audit",
+      "patterns"
+    ]
+  },
+  "web-accessibility": {
+    "categories": [
+      "web",
+      "testing",
+      "ai-engineering"
+    ],
+    "tags": [
+      "web",
+      "accessibility"
+    ]
+  },
+  "web-artifacts-builder": {
+    "categories": [
+      "web",
+      "ai-engineering"
+    ],
+    "tags": [
+      "web",
+      "artifacts",
+      "builder"
+    ]
+  },
+  "web-coder": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "web",
+      "coder"
+    ]
+  },
+  "web-component-design": {
+    "categories": [
+      "web",
+      "architecture",
+      "design"
+    ],
+    "tags": [
+      "web",
+      "component",
+      "design"
+    ]
+  },
+  "web-design-guidelines": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "design"
+    ],
+    "tags": [
+      "web",
+      "design",
+      "guidelines"
+    ]
+  },
+  "web-design-reviewer": {
+    "categories": [
+      "web",
+      "testing",
+      "database"
+    ],
+    "tags": [
+      "web",
+      "design",
+      "reviewer"
+    ]
+  },
+  "web-typography": {
+    "categories": [
+      "web",
+      "ux"
+    ],
+    "tags": [
+      "typography",
+      "css"
+    ]
+  },
+  "web-vitals-optimization": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "web-workers": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "frontend",
+      "react"
+    ]
+  },
+  "web3-testing": {
+    "categories": [
+      "web",
+      "testing",
+      "architecture"
+    ],
+    "tags": [
+      "web3",
+      "testing"
+    ]
+  },
+  "webapp-playwright-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "playwright",
+      "web-testing",
+      "browser-automation",
+      "ui-validation"
+    ]
+  },
+  "webapp-selenium-testing": {
+    "categories": [
+      "testing"
+    ],
+    "tags": [
+      "selenium",
+      "java",
+      "page-object-model",
+      "junit",
+      "web-testing"
+    ]
+  },
+  "webapp-testing": {
+    "categories": [
+      "web",
+      "testing"
+    ],
+    "tags": [
+      "webapp",
+      "testing"
+    ]
+  },
+  "webhooks-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs"
+    ]
+  },
+  "websocket-implementation": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "backend",
+      "nodejs",
+      "websocket",
+      "jwt"
+    ]
+  },
+  "what-context-needed": {
+    "categories": [
+      "web"
+    ],
+    "tags": [
+      "what",
+      "context",
+      "needed"
+    ]
+  },
+  "winapp-cli": {
+    "categories": [
+      "web",
+      "devops",
+      "database"
+    ],
+    "tags": [
+      "winapp",
+      "cli"
+    ]
+  },
+  "winmd-api-search": {
+    "categories": [
+      "web",
+      "database",
+      "ai-engineering"
+    ],
+    "tags": [
+      "winmd",
+      "api",
+      "search"
+    ]
+  },
+  "winui3-migration-guide": {
+    "categories": [
+      "web",
+      "database"
+    ],
+    "tags": [
+      "winui3",
+      "migration",
+      "guide"
+    ]
+  },
+  "workflow-automation": {
+    "categories": [
+      "web",
+      "devops",
+      "methodology"
+    ],
+    "tags": [
+      "workflow",
+      "automation"
+    ]
+  },
+  "workflow-orchestration-patterns": {
+    "categories": [
+      "web",
+      "architecture",
+      "ai-engineering"
+    ],
+    "tags": [
+      "workflow",
+      "orchestration",
+      "patterns"
+    ]
+  },
+  "workflow-patterns": {
+    "categories": [
+      "methodology"
+    ],
+    "tags": [
+      "workflow",
+      "patterns"
+    ]
+  },
+  "workiq-copilot": {
+    "categories": [
+      "web",
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "workiq",
+      "copilot"
+    ]
+  },
+  "write-coding-standards-from-file": {
+    "categories": [
+      "ai-engineering",
+      "documentation"
+    ],
+    "tags": [
+      "write",
+      "coding",
+      "standards",
+      "from"
+    ]
+  },
+  "writing-effective-readme": {
+    "categories": [
+      "documentation"
+    ],
+    "tags": [
+      "docs",
+      "docker"
+    ]
+  },
+  "xlsx": {
+    "categories": [
+      "web",
+      "testing",
+      "devops"
+    ],
+    "tags": [
+      "xlsx"
+    ]
+  },
+  "xss-prevention-guide": {
+    "categories": [
+      "security"
+    ],
+    "tags": [
+      "security",
+      "react",
+      "xss"
+    ]
+  }
+}

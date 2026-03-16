@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+
+# Skills registry database (schema.sql is tracked, DB is user-local)
+skills-registry/*.db
+skills-registry/*.db-wal
+skills-registry/*.db-shm
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pytest / mypy / ruff
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment
+.env
+.env.*
+
+# Claude Code
+.claude/settings.local.json

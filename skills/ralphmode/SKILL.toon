@@ -1,0 +1,30 @@
+N:ralphmode
+D:[ralphmode] Apply permission profile for Claude Code (or Codex/Gemini) to reduce approval popups during ralph/jeo automation. Runs apply-ralphmode.sh automatically: detects repo root, writes .claude/settings.json with acceptEdits+denylist (repo) or bypassPermissions (sandbox), creates ~/.claude/hooks/ralph-safety-check.sh if missing. Key safety rule: repo preset by default; sandbox only for disposable environments.
+G:ralph permissions automation claude-code codex-cli gemini-cli sandbox bypass trusted-folders denylist jeo
+
+U[5]:
+  When approval popups break flow while repeatedly running ralph or jeo
+  When you need to align Claude Code, Codex CLI, and Gemini CLI settings for the same repo
+  When you must separate repo-scoped automation from true YOLO mode
+  When expanding automation while keeping guardrails for .env/secrets/destructive shell commands
+  When you need to check current ralphmode status (bash apply-ralphmode.sh --status)
+
+S[5]{n,action,details}:
+  1,Detect-Mode,Parse user message: sandbox/yolo/bypass-all → MODE=sandbox; everything else → MODE=repo (default)
+  2,Run-Script,Run: bash scripts/apply-ralphmode.sh --mode $MODE (writes .claude/settings.json + ensures safety hook)
+  3,Inline-Fallback,If script not found: apply Python inline preset (repo: acceptEdits+deny-list; sandbox: bypassPermissions)
+  4,Verify-Hook,Confirm ~/.claude/hooks/ralph-safety-check.sh exists; create if missing (blocks rm -rf, force-push, sudo, .env access)
+  5,Report-Revert,Tell user: preset applied, file path, allow/deny list, restart-required, revert command (rm .claude/settings.json)
+
+R[5]:
+  Default mode is repo (acceptEdits + deny-list); sandbox mode requires explicit user request
+  Script location: .agent-skills/ralphmode/scripts/apply-ralphmode.sh (also ~/.agent-skills/... or ~/.claude/skills/...)
+  Check status without changes: bash apply-ralphmode.sh --status
+  For Codex sandbox runs: codex -c model_reasoning_effort="high" --dangerously-bypass-approvals-and-sandbox -c model_reasoning_summary="detailed" -c model_supports_reasoning_summaries=true
+  Gemini sandbox: gemini --yolo (combines sandbox + auto-approve; disposable environments only)
+
+E[4]{desc,in,out}:
+  "Claude Code repo preset","ralphmode (no sandbox keyword)","Writes .claude/settings.json with acceptEdits + deny-list for .env/rm-rf/sudo/force-push"
+  "Claude Code sandbox preset","ralphmode sandbox","Writes .claude/settings.json with bypassPermissions; for disposable environments only"
+  "Codex CLI sandbox flags","ralphmode codex sandbox","codex -c model_reasoning_effort=high --dangerously-bypass-approvals-and-sandbox -c model_reasoning_summary=detailed -c model_supports_reasoning_summaries=true"
+  "Gemini YOLO mode","ralphmode gemini sandbox","gemini --yolo — combines sandbox + auto-approve for disposable-sandbox ralph runs"
