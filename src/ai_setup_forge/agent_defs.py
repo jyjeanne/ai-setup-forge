@@ -10,17 +10,17 @@ import frontmatter
 
 from ai_setup_forge.agents import AGENTS
 from ai_setup_forge.constants import (
-    AGENTS_DIR,
     AGENT_DEFS_SUBDIR,
+    AGENTS_DIR,
     CANONICAL_AGENT_DEFS_DIR,
     get_home,
 )
 from ai_setup_forge.types import AgentConfig, AgentDefinition
 
-
 # ---------------------------------------------------------------------------
 # Discovery
 # ---------------------------------------------------------------------------
+
 
 def discover_agent_defs(source_dir: Path, names: list[str] | None = None) -> list[AgentDefinition]:
     """Discover .agent.md files in a directory.
@@ -91,8 +91,12 @@ def parse_agent_md(path: Path) -> AgentDefinition | None:
         category=data.get("category") if isinstance(data.get("category"), str) else None,
         tools=tools,
         target=data.get("target") if isinstance(data.get("target"), str) else None,
-        disable_model_invocation=data.get("disable-model-invocation") if isinstance(data.get("disable-model-invocation"), bool) else None,
-        user_invocable=data.get("user-invocable") if isinstance(data.get("user-invocable"), bool) else None,
+        disable_model_invocation=data.get("disable-model-invocation")
+        if isinstance(data.get("disable-model-invocation"), bool)
+        else None,
+        user_invocable=data.get("user-invocable")
+        if isinstance(data.get("user-invocable"), bool)
+        else None,
         mcp_servers=mcp_servers,
         frontmatter=data,
     )
@@ -112,6 +116,7 @@ def _get_bundled_agents_dir() -> Path:
 # ---------------------------------------------------------------------------
 # Path helpers
 # ---------------------------------------------------------------------------
+
 
 def _canonical_dir(is_global: bool) -> Path:
     """Return the canonical agent definitions directory."""
@@ -140,9 +145,7 @@ def _validate_target_path(target: Path, base: Path) -> None:
     try:
         target.resolve().relative_to(base.resolve())
     except ValueError:
-        raise InstallError(
-            f"Path traversal detected: {target} is not within {base}"
-        )
+        raise InstallError(f"Path traversal detected: {target} is not within {base}") from None
 
 
 class InstallError(Exception):
@@ -152,6 +155,7 @@ class InstallError(Exception):
 # ---------------------------------------------------------------------------
 # Install
 # ---------------------------------------------------------------------------
+
 
 def _copy_to_canonical(agent_def: AgentDefinition, canonical: Path) -> None:
     """Copy an .agent.md file to the canonical location."""
@@ -212,10 +216,7 @@ def install_agent_def(
     canonical = _canonical_path(agent_def.name, is_global)
 
     # Validate canonical path
-    if is_global:
-        base = get_home() / AGENTS_DIR
-    else:
-        base = Path.cwd() / AGENTS_DIR
+    base = get_home() / AGENTS_DIR if is_global else Path.cwd() / AGENTS_DIR
     _validate_target_path(canonical, base)
 
     # Step 1: Copy to canonical
@@ -227,11 +228,13 @@ def install_agent_def(
     for agent_name in agent_names:
         agent = AGENTS.get(agent_name)
         if not agent:
-            results.append({
-                "agent": agent_name,
-                "status": "error",
-                "message": f"Unknown agent: {agent_name}",
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "error",
+                    "message": f"Unknown agent: {agent_name}",
+                }
+            )
             continue
 
         try:
@@ -245,18 +248,22 @@ def install_agent_def(
             else:
                 method = _create_file_link(agent_file, canonical)
 
-            results.append({
-                "agent": agent_name,
-                "status": "ok",
-                "method": method,
-                "path": str(agent_file),
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "ok",
+                    "method": method,
+                    "path": str(agent_file),
+                }
+            )
         except OSError as e:
-            results.append({
-                "agent": agent_name,
-                "status": "error",
-                "message": str(e),
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "error",
+                    "message": str(e),
+                }
+            )
 
     return results
 
@@ -264,6 +271,7 @@ def install_agent_def(
 # ---------------------------------------------------------------------------
 # Remove
 # ---------------------------------------------------------------------------
+
 
 def find_installed_agent_defs(
     is_global: bool = False,
@@ -342,20 +350,24 @@ def remove_agent_def(
             continue
         agent_file = _agent_defs_dir(agent, is_global) / f"{name}.agent.md"
         if _remove_file(agent_file):
-            results.append({
-                "agent": agent_name,
-                "status": "removed",
-                "path": str(agent_file),
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "removed",
+                    "path": str(agent_file),
+                }
+            )
 
     if remove_all:
         canonical = _canonical_path(name, is_global)
         if _remove_file(canonical):
-            results.append({
-                "agent": "canonical",
-                "status": "removed",
-                "path": str(canonical),
-            })
+            results.append(
+                {
+                    "agent": "canonical",
+                    "status": "removed",
+                    "path": str(canonical),
+                }
+            )
 
     return results
 
@@ -363,6 +375,7 @@ def remove_agent_def(
 # ---------------------------------------------------------------------------
 # Init (template)
 # ---------------------------------------------------------------------------
+
 
 def create_agent_template(name: str | None = None) -> Path | None:
     """Create a new .agent.md from the template.

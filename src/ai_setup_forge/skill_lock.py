@@ -6,7 +6,13 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from ai_setup_forge.constants import AGENTS_DIR, LOCK_FILE_NAME, LOCK_FILE_VERSION, SKILLS_SUBDIR, get_home
+from ai_setup_forge.constants import (
+    AGENTS_DIR,
+    LOCK_FILE_NAME,
+    LOCK_FILE_VERSION,
+    SKILLS_SUBDIR,
+    get_home,
+)
 from ai_setup_forge.types import SkillLockEntry
 
 

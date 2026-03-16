@@ -17,10 +17,10 @@ from ai_setup_forge.updater import (
     update_skill,
 )
 
-
 # ---------------------------------------------------------------------------
 # URL parsing
 # ---------------------------------------------------------------------------
+
 
 class TestParseGithubUrl:
     def test_https_url(self) -> None:
@@ -60,25 +60,32 @@ class TestParseGithubUrl:
 # Check result
 # ---------------------------------------------------------------------------
 
+
 class TestCheckResult:
     def test_outdated(self) -> None:
-        result = CheckResult(skills=[
-            SkillUpdateInfo("a", "url", "github", "hash1", "hash2", has_update=True),
-            SkillUpdateInfo("b", "url", "github", "hash1", "hash1", has_update=False),
-        ])
+        result = CheckResult(
+            skills=[
+                SkillUpdateInfo("a", "url", "github", "hash1", "hash2", has_update=True),
+                SkillUpdateInfo("b", "url", "github", "hash1", "hash1", has_update=False),
+            ]
+        )
         assert len(result.outdated) == 1
         assert result.outdated[0].name == "a"
 
     def test_up_to_date(self) -> None:
-        result = CheckResult(skills=[
-            SkillUpdateInfo("a", "url", "github", "hash1", "hash1", has_update=False),
-        ])
+        result = CheckResult(
+            skills=[
+                SkillUpdateInfo("a", "url", "github", "hash1", "hash1", has_update=False),
+            ]
+        )
         assert len(result.up_to_date) == 1
 
     def test_errors(self) -> None:
-        result = CheckResult(skills=[
-            SkillUpdateInfo("a", "url", "local", "", error="not supported"),
-        ])
+        result = CheckResult(
+            skills=[
+                SkillUpdateInfo("a", "url", "local", "", error="not supported"),
+            ]
+        )
         assert len(result.errors) == 1
         assert result.errors[0].error == "not supported"
 
@@ -87,13 +94,12 @@ class TestCheckResult:
 # check_for_updates
 # ---------------------------------------------------------------------------
 
+
 class TestCheckForUpdates:
     def test_empty_lock_file(self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
         lock_file = tmp_path / ".agents" / ".skill-lock.json"
         lock_file.parent.mkdir(parents=True)
-        lock_file.write_text(json.dumps({
-            "version": 1, "skills": {}, "last_selected_agents": []
-        }))
+        lock_file.write_text(json.dumps({"version": 1, "skills": {}, "last_selected_agents": []}))
         monkeypatch.setattr("ai_setup_forge.skill_lock.get_home", lambda: tmp_path)
 
         result = check_for_updates()
@@ -102,21 +108,25 @@ class TestCheckForUpdates:
     def test_non_github_skill(self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
         lock_file = tmp_path / ".agents" / ".skill-lock.json"
         lock_file.parent.mkdir(parents=True)
-        lock_file.write_text(json.dumps({
-            "version": 1,
-            "skills": {
-                "my-skill": {
-                    "source": "./local",
-                    "source_type": "local",
-                    "source_url": "./local",
-                    "skill_path": None,
-                    "skill_folder_hash": "",
-                    "installed_at": "2026-01-01T00:00:00Z",
-                    "updated_at": "2026-01-01T00:00:00Z",
+        lock_file.write_text(
+            json.dumps(
+                {
+                    "version": 1,
+                    "skills": {
+                        "my-skill": {
+                            "source": "./local",
+                            "source_type": "local",
+                            "source_url": "./local",
+                            "skill_path": None,
+                            "skill_folder_hash": "",
+                            "installed_at": "2026-01-01T00:00:00Z",
+                            "updated_at": "2026-01-01T00:00:00Z",
+                        }
+                    },
+                    "last_selected_agents": [],
                 }
-            },
-            "last_selected_agents": [],
-        }))
+            )
+        )
         monkeypatch.setattr("ai_setup_forge.skill_lock.get_home", lambda: tmp_path)
 
         result = check_for_updates()
@@ -135,21 +145,25 @@ class TestCheckForUpdates:
     ) -> None:
         lock_file = tmp_path / ".agents" / ".skill-lock.json"
         lock_file.parent.mkdir(parents=True)
-        lock_file.write_text(json.dumps({
-            "version": 1,
-            "skills": {
-                "my-skill": {
-                    "source": "owner/repo",
-                    "source_type": "github",
-                    "source_url": "https://github.com/owner/repo",
-                    "skill_path": "skills/my-skill",
-                    "skill_folder_hash": "old-hash-123",
-                    "installed_at": "2026-01-01T00:00:00Z",
-                    "updated_at": "2026-01-01T00:00:00Z",
+        lock_file.write_text(
+            json.dumps(
+                {
+                    "version": 1,
+                    "skills": {
+                        "my-skill": {
+                            "source": "owner/repo",
+                            "source_type": "github",
+                            "source_url": "https://github.com/owner/repo",
+                            "skill_path": "skills/my-skill",
+                            "skill_folder_hash": "old-hash-123",
+                            "installed_at": "2026-01-01T00:00:00Z",
+                            "updated_at": "2026-01-01T00:00:00Z",
+                        }
+                    },
+                    "last_selected_agents": [],
                 }
-            },
-            "last_selected_agents": [],
-        }))
+            )
+        )
         monkeypatch.setattr("ai_setup_forge.skill_lock.get_home", lambda: tmp_path)
         mock_token.return_value = "fake-token"
         mock_tree_sha.return_value = "new-hash-456"
@@ -170,21 +184,25 @@ class TestCheckForUpdates:
     ) -> None:
         lock_file = tmp_path / ".agents" / ".skill-lock.json"
         lock_file.parent.mkdir(parents=True)
-        lock_file.write_text(json.dumps({
-            "version": 1,
-            "skills": {
-                "my-skill": {
-                    "source": "owner/repo",
-                    "source_type": "github",
-                    "source_url": "https://github.com/owner/repo",
-                    "skill_path": None,
-                    "skill_folder_hash": "same-hash",
-                    "installed_at": "2026-01-01T00:00:00Z",
-                    "updated_at": "2026-01-01T00:00:00Z",
+        lock_file.write_text(
+            json.dumps(
+                {
+                    "version": 1,
+                    "skills": {
+                        "my-skill": {
+                            "source": "owner/repo",
+                            "source_type": "github",
+                            "source_url": "https://github.com/owner/repo",
+                            "skill_path": None,
+                            "skill_folder_hash": "same-hash",
+                            "installed_at": "2026-01-01T00:00:00Z",
+                            "updated_at": "2026-01-01T00:00:00Z",
+                        }
+                    },
+                    "last_selected_agents": [],
                 }
-            },
-            "last_selected_agents": [],
-        }))
+            )
+        )
         monkeypatch.setattr("ai_setup_forge.skill_lock.get_home", lambda: tmp_path)
         mock_token.return_value = None
         mock_tree_sha.return_value = "same-hash"
@@ -206,21 +224,25 @@ class TestCheckForUpdates:
     ) -> None:
         lock_file = tmp_path / ".agents" / ".skill-lock.json"
         lock_file.parent.mkdir(parents=True)
-        lock_file.write_text(json.dumps({
-            "version": 1,
-            "skills": {
-                "my-skill": {
-                    "source": "owner/repo",
-                    "source_type": "github",
-                    "source_url": "owner/repo",
-                    "skill_path": None,
-                    "skill_folder_hash": "old",
-                    "installed_at": "2026-01-01T00:00:00Z",
-                    "updated_at": "2026-01-01T00:00:00Z",
+        lock_file.write_text(
+            json.dumps(
+                {
+                    "version": 1,
+                    "skills": {
+                        "my-skill": {
+                            "source": "owner/repo",
+                            "source_type": "github",
+                            "source_url": "owner/repo",
+                            "skill_path": None,
+                            "skill_folder_hash": "old",
+                            "installed_at": "2026-01-01T00:00:00Z",
+                            "updated_at": "2026-01-01T00:00:00Z",
+                        }
+                    },
+                    "last_selected_agents": [],
                 }
-            },
-            "last_selected_agents": [],
-        }))
+            )
+        )
         monkeypatch.setattr("ai_setup_forge.skill_lock.get_home", lambda: tmp_path)
         mock_token.return_value = None
         mock_tree_sha.return_value = None  # Tree API fails
@@ -235,6 +257,7 @@ class TestCheckForUpdates:
 # ---------------------------------------------------------------------------
 # _describe_api_error
 # ---------------------------------------------------------------------------
+
 
 class TestDescribeApiError:
     def test_401(self) -> None:
@@ -377,12 +400,16 @@ class TestUpdateSkill:
         tmp_path: Path,
     ) -> None:
         mock_get.return_value = _make_lock_entry(
-            source="./local", source_type="local", source_url="./local",
+            source="./local",
+            source_type="local",
+            source_url="./local",
         )
         local_dir = tmp_path / "skills"
         local_dir.mkdir()
         mock_parse.return_value = _make_parsed(
-            src_type="local", url="./local", local_path=local_dir,
+            src_type="local",
+            url="./local",
+            local_path=local_dir,
         )
         skill = _make_skill()
         mock_discover.return_value = [skill]
@@ -520,11 +547,13 @@ class TestUpdateSkill:
         mock_discover.return_value = [skill]
         mock_filter.return_value = [skill]
 
-        with patch(f"{_GIT}.shallow_clone", return_value=clone_dir), \
-             patch(
-                 "ai_setup_forge.registry.ensure_registry",
-                 side_effect=RuntimeError("db broken"),
-             ):
+        with (
+            patch(f"{_GIT}.shallow_clone", return_value=clone_dir),
+            patch(
+                "ai_setup_forge.registry.ensure_registry",
+                side_effect=RuntimeError("db broken"),
+            ),
+        ):
             result = update_skill("my-skill")
 
         # Should succeed despite registry failure

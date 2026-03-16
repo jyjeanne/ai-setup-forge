@@ -17,10 +17,10 @@ from ai_setup_forge.agent_defs import (
 )
 from ai_setup_forge.types import AgentDefinition
 
-
 # ---------------------------------------------------------------------------
 # Fixtures
 # ---------------------------------------------------------------------------
+
 
 @pytest.fixture
 def agents_dir(tmp_path: Path) -> Path:
@@ -73,6 +73,7 @@ def project_dir(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
 # ---------------------------------------------------------------------------
 # Discovery
 # ---------------------------------------------------------------------------
+
 
 class TestDiscoverAgentDefs:
     def test_discover_all(self, agents_dir: Path) -> None:
@@ -141,10 +142,9 @@ class TestParseAgentMd:
 # Install
 # ---------------------------------------------------------------------------
 
+
 class TestInstallAgentDef:
-    def test_install_creates_canonical_and_links(
-        self, agents_dir: Path, project_dir: Path
-    ) -> None:
+    def test_install_creates_canonical_and_links(self, agents_dir: Path, project_dir: Path) -> None:
         ad = parse_agent_md(agents_dir / "docs-agent.agent.md")
         assert ad is not None
 
@@ -168,6 +168,7 @@ class TestInstallAgentDef:
 
         # Need to update global paths for the test
         from ai_setup_forge.agents import AGENTS
+
         original_global_dirs = {}
         for name, config in AGENTS.items():
             original_global_dirs[name] = config.global_agents_dir
@@ -208,6 +209,7 @@ class TestInstallAgentDef:
 # Find installed
 # ---------------------------------------------------------------------------
 
+
 class TestFindInstalled:
     def test_find_nothing(self, project_dir: Path) -> None:
         installed = find_installed_agent_defs()
@@ -240,6 +242,7 @@ class TestFindInstalled:
 # Remove
 # ---------------------------------------------------------------------------
 
+
 class TestRemoveAgentDef:
     def test_remove_all_agents(self, agents_dir: Path, project_dir: Path) -> None:
         ad = parse_agent_md(agents_dir / "docs-agent.agent.md")
@@ -262,7 +265,7 @@ class TestRemoveAgentDef:
         assert ad is not None
 
         install_agent_def(ad, ["claude-code", "mistral-vibe"], mode="copy")
-        results = remove_agent_def("docs-agent", agent_names=["claude-code"])
+        remove_agent_def("docs-agent", agent_names=["claude-code"])
 
         # Only claude-code link removed, canonical preserved
         canonical = project_dir / ".agents" / "agent-definitions" / "docs-agent.agent.md"
@@ -281,6 +284,7 @@ class TestRemoveAgentDef:
 # ---------------------------------------------------------------------------
 # Init (template)
 # ---------------------------------------------------------------------------
+
 
 class TestCreateAgentTemplate:
     def test_create_template(self, project_dir: Path) -> None:
@@ -310,6 +314,7 @@ class TestCreateAgentTemplate:
 # ---------------------------------------------------------------------------
 # MCP servers parsing
 # ---------------------------------------------------------------------------
+
 
 class TestMcpServersParsing:
     def test_mcp_servers_parsed_as_dict(self, tmp_path: Path) -> None:

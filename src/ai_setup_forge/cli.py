@@ -70,24 +70,35 @@ def _resolve_agents(agents: tuple[str, ...], yes: bool) -> list[str]:
     return selected or list(AGENTS.keys())
 
 
-
 # =========================================================================
 # Skill commands
 # =========================================================================
+
 
 @cli.command()
 @click.argument("source", required=True)
 @click.option("-g", "--global", "is_global", is_flag=True, help="Install to user directory.")
 @click.option(
-    "-a", "--agent", "agents", multiple=True,
+    "-a",
+    "--agent",
+    "agents",
+    multiple=True,
     help="Target agents (claude-code, mistral-vibe, github-copilot, or *).",
 )
 @click.option("-s", "--skill", "skills", multiple=True, help="Specific skills to install.")
-@click.option("-c", "--category", "categories", multiple=True, help="Install all skills in a category (e.g. security, devops, web).")
+@click.option(
+    "-c",
+    "--category",
+    "categories",
+    multiple=True,
+    help="Install all skills in a category (e.g. security, devops, web).",
+)
 @click.option("-y", "--yes", is_flag=True, help="Skip confirmation prompts.")
 @click.option("--all", "install_all", is_flag=True, help="Install all skills to all agents.")
 @click.option(
-    "--mode", type=click.Choice(["symlink", "copy"]), default="symlink",
+    "--mode",
+    type=click.Choice(["symlink", "copy"]),
+    default="symlink",
     help="Installation mode.",
 )
 def add(
@@ -129,7 +140,7 @@ def add(
                 clone_dir = shallow_clone(parsed.url, ref=parsed.ref)
             except GitError as e:
                 console.print(f"[red]Error:[/] {e}")
-                raise SystemExit(1)
+                raise SystemExit(1) from e
         skill_source_dir = clone_dir
 
     try:
@@ -152,22 +163,26 @@ def add(
         # 4. Filter by category (using bundled_skills_map.json)
         if categories:
             from ai_setup_forge.skills import _get_category_skill_names
+
             cat_names = _get_category_skill_names(list(categories))
             if not cat_names:
                 console.print(f"[yellow]No skills found for category: {', '.join(categories)}[/]")
                 raise SystemExit(1)
             discovered = [s for s in discovered if s.name in cat_names]
             if not discovered:
-                console.print(f"[yellow]No matching skills found for category: {', '.join(categories)}[/]")
+                console.print(
+                    f"[yellow]No matching skills found for category: {', '.join(categories)}[/]"
+                )
                 raise SystemExit(1)
-            console.print(f"[dim]Category filter:[/] {', '.join(categories)} ({len(discovered)} skills)")
+            console.print(
+                f"[dim]Category filter:[/] {', '.join(categories)} ({len(discovered)} skills)"
+            )
 
         # 5. Filter by skill name
         if parsed.skill_filter:
             discovered = filter_skills(discovered, [parsed.skill_filter])
-        elif skills:
-            if "*" not in skills:
-                discovered = filter_skills(discovered, list(skills))
+        elif skills and "*" not in skills:
+            discovered = filter_skills(discovered, list(skills))
 
         if not discovered:
             console.print("[yellow]No matching skills found.[/]")
@@ -178,16 +193,16 @@ def add(
         for s in discovered:
             console.print(f"  * [cyan]{s.name}[/] - {s.description}")
 
-        if not yes and not install_all:
-            if not click.confirm("\nInstall these skills?", default=True):
-                console.print("[dim]Cancelled.[/]")
-                return
+        if (
+            not yes
+            and not install_all
+            and not click.confirm("\nInstall these skills?", default=True)
+        ):
+            console.print("[dim]Cancelled.[/]")
+            return
 
         # 6. Resolve agents
-        if install_all:
-            target_agents = list(AGENTS.keys())
-        else:
-            target_agents = _resolve_agents(agents, yes)
+        target_agents = list(AGENTS.keys()) if install_all else _resolve_agents(agents, yes)
 
         if not target_agents:
             console.print("[yellow]No agents selected.[/]")
@@ -217,8 +232,11 @@ def add(
                 conn = ensure_registry()
                 try:
                     upsert_skill(
-                        conn, name=skill.name, description=skill.description,
-                        origin=origin, source_url=parsed.url,
+                        conn,
+                        name=skill.name,
+                        description=skill.description,
+                        origin=origin,
+                        source_url=parsed.url,
                     )
                     mark_installed(conn, skill.name, target_agents, scope, parsed.url, origin)
                 finally:
@@ -401,13 +419,13 @@ def find(query: str | None, remote: bool, bundled_only: bool) -> None:
 
     if not results:
         if query:
-            console.print(f"[dim]No skills found for \"{query}\".[/]")
+            console.print(f'[dim]No skills found for "{query}".[/]')
         else:
             console.print("[dim]No bundled skills available.[/]")
         return
 
     # Display results
-    table = Table(title="Skills" if not query else f"Results for \"{query}\"")
+    table = Table(title="Skills" if not query else f'Results for "{query}"')
     table.add_column("Name", style="cyan")
     table.add_column("Description", style="dim", max_width=50)
     table.add_column("Source", style="dim")
@@ -425,7 +443,7 @@ def find(query: str | None, remote: bool, bundled_only: bool) -> None:
     # Show skills.sh links for registry results
     registry_results = [r for r in results if r.origin == "registry" and r.slug]
     if registry_results:
-        console.print(f"\n[dim]Browse at:[/] https://skills.sh/")
+        console.print("\n[dim]Browse at:[/] https://skills.sh/")
 
 
 @cli.command()
@@ -456,7 +474,7 @@ def check() -> None:
                 s.remote_hash[:12] if s.remote_hash else "-",
             )
         console.print(table)
-        console.print(f"\nRun [bold]ai-setup-forge update[/] to update all.")
+        console.print("\nRun [bold]ai-setup-forge update[/] to update all.")
     else:
         console.print("[green]All skills are up to date.[/]")
 
@@ -506,10 +524,9 @@ def update(yes: bool, agents: tuple[str, ...], skills: tuple[str, ...]) -> None:
     for s in to_update:
         console.print(f"  * [cyan]{s.name}[/] ({s.source_url})")
 
-    if not yes:
-        if not click.confirm("\nContinue?", default=True):
-            console.print("[dim]Cancelled.[/]")
-            return
+    if not yes and not click.confirm("\nContinue?", default=True):
+        console.print("[dim]Cancelled.[/]")
+        return
 
     agent_names = list(agents) if agents else None
     success = 0
@@ -640,14 +657,23 @@ def agents_status() -> None:
 @click.argument("source", required=True)
 @click.option("-g", "--global", "is_global", is_flag=True, help="Install to user directory.")
 @click.option(
-    "-a", "--agent", "coding_agents", multiple=True,
+    "-a",
+    "--agent",
+    "coding_agents",
+    multiple=True,
     help="Target coding tools (claude-code, mistral-vibe, github-copilot, or *).",
 )
-@click.option("-s", "--select", "selections", multiple=True, help="Specific agent definitions to install.")
-@click.option("-y", "--yes", is_flag=True, help="Skip confirmation prompts.")
-@click.option("--all", "install_all", is_flag=True, help="Install all agent definitions to all coding tools.")
 @click.option(
-    "--mode", type=click.Choice(["symlink", "copy"]), default="symlink",
+    "-s", "--select", "selections", multiple=True, help="Specific agent definitions to install."
+)
+@click.option("-y", "--yes", is_flag=True, help="Skip confirmation prompts.")
+@click.option(
+    "--all", "install_all", is_flag=True, help="Install all agent definitions to all coding tools."
+)
+@click.option(
+    "--mode",
+    type=click.Choice(["symlink", "copy"]),
+    default="symlink",
     help="Installation mode.",
 )
 def agents_add(
@@ -696,7 +722,7 @@ def agents_add(
                 clone_dir = shallow_clone(parsed.url, ref=parsed.ref)
             except GitError as e:
                 console.print(f"[red]Error:[/] {e}")
-                raise SystemExit(1)
+                raise SystemExit(1) from e
         source_dir = clone_dir
 
     try:
@@ -720,16 +746,16 @@ def agents_add(
         for ad in discovered:
             console.print(f"  * [cyan]{ad.name}[/] - {ad.description}")
 
-        if not yes and not install_all:
-            if not click.confirm("\nInstall these agent definitions?", default=True):
-                console.print("[dim]Cancelled.[/]")
-                return
+        if (
+            not yes
+            and not install_all
+            and not click.confirm("\nInstall these agent definitions?", default=True)
+        ):
+            console.print("[dim]Cancelled.[/]")
+            return
 
         # 5. Resolve coding tools
-        if install_all:
-            target_agents = list(AGENTS.keys())
-        else:
-            target_agents = _resolve_agents(coding_agents, yes)
+        target_agents = list(AGENTS.keys()) if install_all else _resolve_agents(coding_agents, yes)
 
         if not target_agents:
             console.print("[yellow]No coding tools selected.[/]")
@@ -759,10 +785,16 @@ def agents_add(
                 conn = ensure_registry()
                 try:
                     upsert_agent_def(
-                        conn, name=ad.name, description=ad.description,
-                        origin=origin, source_url=parsed.url,
-                        model=ad.model, version=ad.version, category=ad.category,
-                        tools=ad.tools, target=ad.target,
+                        conn,
+                        name=ad.name,
+                        description=ad.description,
+                        origin=origin,
+                        source_url=parsed.url,
+                        model=ad.model,
+                        version=ad.version,
+                        category=ad.category,
+                        tools=ad.tools,
+                        target=ad.target,
                     )
                     mark_agent_installed(conn, ad.name, target_agents, scope)
                 finally:
@@ -805,7 +837,9 @@ def agents_list(is_global: bool, coding_agents: tuple[str, ...]) -> None:
 @agents.command(name="remove")
 @click.argument("names", nargs=-1)
 @click.option("-g", "--global", "is_global", is_flag=True, help="Remove from global scope.")
-@click.option("-a", "--agent", "coding_agents", multiple=True, help="Remove from specific coding tools.")
+@click.option(
+    "-a", "--agent", "coding_agents", multiple=True, help="Remove from specific coding tools."
+)
 @click.option("-y", "--yes", is_flag=True, help="Skip confirmation.")
 @click.option("--all", "remove_all", is_flag=True, help="Remove all agent definitions.")
 def agents_remove(
@@ -921,12 +955,12 @@ def agents_find(
 
         if not results:
             if query:
-                console.print(f"[dim]No agent definitions found for \"{query}\".[/]")
+                console.print(f'[dim]No agent definitions found for "{query}".[/]')
             else:
                 console.print("[dim]No agent definitions match the filters.[/]")
             return
 
-        title = f"Agent Definitions: \"{query}\"" if query else f"Agent Definitions ({len(results)})"
+        title = f'Agent Definitions: "{query}"' if query else f"Agent Definitions ({len(results)})"
         table = Table(title=title)
         table.add_column("Name", style="cyan")
         table.add_column("Description", style="dim", max_width=40)
@@ -942,7 +976,12 @@ def agents_find(
             tags = ", ".join(ad.get("tags", []))
             inst = "[green]Yes[/]" if ad["installed"] else "[dim]No[/]"
             table.add_row(
-                ad["name"], desc, ad.get("category") or "-", tags, ad["origin"], inst,
+                ad["name"],
+                desc,
+                ad.get("category") or "-",
+                tags,
+                ad["origin"],
+                inst,
             )
 
         console.print(table)
@@ -983,6 +1022,7 @@ def agents_init(name: str | None) -> None:
 # =========================================================================
 # Registry command group
 # =========================================================================
+
 
 @cli.group()
 def registry() -> None:
@@ -1035,18 +1075,21 @@ def registry_sync(path: str, origin: str | None, do_validate: bool) -> None:
     if not path:
         # Re-sync bundled
         result = sync_bundled_skills(conn)
-        console.print(f"[green]Synced bundled skills:[/] {result.added} added, {result.updated} updated.")
+        console.print(
+            f"[green]Synced bundled skills:[/] {result.added} added, {result.updated} updated."
+        )
     else:
         source_dir = Path(path).resolve()
         if not source_dir.is_dir():
             console.print(f"[red]Directory not found:[/] {path}")
             raise SystemExit(1)
         result = sync_skills_from_dir(
-            conn, source_dir, origin=origin or "unknown", validate=do_validate,
+            conn,
+            source_dir,
+            origin=origin or "unknown",
+            validate=do_validate,
         )
-        console.print(
-            f"[green]Synced:[/] {result.added} added, {result.updated} updated."
-        )
+        console.print(f"[green]Synced:[/] {result.added} added, {result.updated} updated.")
         if result.errors:
             for err in result.errors:
                 console.print(f"  [red]Error:[/] {err}")
@@ -1059,7 +1102,9 @@ def registry_sync(path: str, origin: str | None, do_validate: bool) -> None:
 @click.option("--tag", default=None, help="Filter by tag.")
 @click.option("--origin", default=None, help="Filter by origin.")
 @click.option("--installed", "show_installed", is_flag=True, help="Show installed only.")
-@click.option("--not-installed", "show_not_installed", is_flag=True, help="Show not installed only.")
+@click.option(
+    "--not-installed", "show_not_installed", is_flag=True, help="Show not installed only."
+)
 @click.option("--validated", "show_validated", is_flag=True, help="Show validated only.")
 @click.option("--format", "fmt", type=click.Choice(["table", "json"]), default="table")
 def registry_list(
@@ -1072,7 +1117,8 @@ def registry_list(
     fmt: str,
 ) -> None:
     """List skills in the registry."""
-    from ai_setup_forge.registry import ensure_registry, list_skills as reg_list
+    from ai_setup_forge.registry import ensure_registry
+    from ai_setup_forge.registry import list_skills as reg_list
 
     conn = ensure_registry()
 
@@ -1092,13 +1138,23 @@ def registry_list(
     )
 
     if fmt == "json":
-        console.print(json.dumps([{
-            "name": s["name"], "description": s["description"],
-            "origin": s["origin"], "installed": bool(s["installed"]),
-            "validated": bool(s["validated"]),
-            "categories": s.get("categories", []),
-            "tags": s.get("tags", []),
-        } for s in results], indent=2))
+        console.print(
+            json.dumps(
+                [
+                    {
+                        "name": s["name"],
+                        "description": s["description"],
+                        "origin": s["origin"],
+                        "installed": bool(s["installed"]),
+                        "validated": bool(s["validated"]),
+                        "categories": s.get("categories", []),
+                        "tags": s.get("tags", []),
+                    }
+                    for s in results
+                ],
+                indent=2,
+            )
+        )
         conn.close()
         return
 
@@ -1154,9 +1210,7 @@ def registry_show(name: str) -> None:
     inst = "Yes" if skill["installed"] else "No"
     console.print(f"[bold]Installed:[/]    {inst}")
     if skill.get("agents"):
-        agents_str = ", ".join(
-            f"{a['agent_name']} ({a['scope']})" for a in skill["agents"]
-        )
+        agents_str = ", ".join(f"{a['agent_name']} ({a['scope']})" for a in skill["agents"])
         console.print(f"  [bold]Agents:[/]     {agents_str}")
     valid = "Yes" if skill["validated"] else "No"
     console.print(f"[bold]Validated:[/]    {valid}")
@@ -1179,11 +1233,11 @@ def registry_search(query: str) -> None:
     results = search_skills(conn, query)
 
     if not results:
-        console.print(f"[dim]No results for \"{query}\".[/]")
+        console.print(f'[dim]No results for "{query}".[/]')
         conn.close()
         return
 
-    table = Table(title=f"Search: \"{query}\" ({len(results)} results)")
+    table = Table(title=f'Search: "{query}" ({len(results)} results)')
     table.add_column("Name", style="cyan")
     table.add_column("Description", style="dim", max_width=40)
     table.add_column("Origin", style="dim")
@@ -1277,10 +1331,9 @@ def registry_remove(skill: str, force: bool) -> None:
     """Remove a skill entry from the registry (does NOT uninstall from disk)."""
     from ai_setup_forge.registry import ensure_registry, remove_skill_entry
 
-    if not force:
-        if not click.confirm(f"Remove '{skill}' from registry?", default=False):
-            console.print("[dim]Cancelled.[/]")
-            return
+    if not force and not click.confirm(f"Remove '{skill}' from registry?", default=False):
+        console.print("[dim]Cancelled.[/]")
+        return
 
     conn = ensure_registry()
     removed = remove_skill_entry(conn, skill)
@@ -1325,7 +1378,7 @@ def registry_stats() -> None:
             console.print(f"    {tag}:  {count}")
 
     if ad["total"] > 0:
-        console.print(f"\n[bold]Agent Definitions[/]")
+        console.print("\n[bold]Agent Definitions[/]")
         console.print(f"  Total:             {ad['total']}")
         console.print(f"  Installed:         {ad['installed']}")
         console.print(f"  Not installed:     {ad['not_installed']}")

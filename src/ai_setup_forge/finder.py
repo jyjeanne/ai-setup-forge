@@ -4,13 +4,11 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
-from pathlib import Path
 
 import httpx
 
 from ai_setup_forge.skills import discover_skills
 from ai_setup_forge.source_parser import _get_bundled_skills_dir
-
 
 SKILLS_API_BASE = os.environ.get("SKILLS_API_URL", "https://skills.sh")
 SEARCH_ENDPOINT = "/api/search"
@@ -57,15 +55,17 @@ def search_bundled(query: str | None = None) -> list[FindResult]:
             if q not in skill.name.lower() and q not in skill.description.lower():
                 continue
 
-        results.append(FindResult(
-            name=skill.name,
-            source="bundled",
-            slug="",
-            installs=0,
-            origin="bundled",
-            description=skill.description,
-            install_cmd=f"ai-setup-forge add bundled -s {skill.name}",
-        ))
+        results.append(
+            FindResult(
+                name=skill.name,
+                source="bundled",
+                slug="",
+                installs=0,
+                origin="bundled",
+                description=skill.description,
+                install_cmd=f"ai-setup-forge add bundled -s {skill.name}",
+            )
+        )
 
     return results
 
@@ -116,15 +116,17 @@ def search_registry(query: str) -> list[FindResult]:
         else:
             install_cmd = f"ai-setup-forge add {slug}"
 
-        results.append(FindResult(
-            name=name,
-            source=source or slug,
-            slug=slug,
-            installs=installs if isinstance(installs, int) else 0,
-            origin="registry",
-            description=description if isinstance(description, str) else "",
-            install_cmd=install_cmd,
-        ))
+        results.append(
+            FindResult(
+                name=name,
+                source=source or slug,
+                slug=slug,
+                installs=installs if isinstance(installs, int) else 0,
+                origin="registry",
+                description=description if isinstance(description, str) else "",
+                install_cmd=install_cmd,
+            )
+        )
 
     return results
 

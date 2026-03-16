@@ -30,12 +30,14 @@ def _is_direct_skill_url(input_str: str) -> bool:
     if not input_str.lower().endswith("/skill.md"):
         return False
     # Exclude GitHub/GitLab (they have their own handling)
-    if "github.com/" in input_str and "raw.githubusercontent.com" not in input_str:
-        if "/blob/" not in input_str and "/raw/" not in input_str:
-            return False
-    if "gitlab.com/" in input_str and "/-/raw/" not in input_str:
+    if (
+        "github.com/" in input_str
+        and "raw.githubusercontent.com" not in input_str
+        and "/blob/" not in input_str
+        and "/raw/" not in input_str
+    ):
         return False
-    return True
+    return not ("gitlab.com/" in input_str and "/-/raw/" not in input_str)
 
 
 def _get_bundled_skills_dir() -> Path:

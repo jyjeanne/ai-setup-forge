@@ -43,9 +43,13 @@ def parse_skill_md(
 
     # Skip internal skills unless requested
     meta = data.get("metadata")
-    if isinstance(meta, dict) and meta.get("internal") is True:
-        if not include_internal and not _should_install_internal():
-            return None
+    if (
+        isinstance(meta, dict)
+        and meta.get("internal") is True
+        and not include_internal
+        and not _should_install_internal()
+    ):
+        return None
 
     return Skill(
         name=name,
@@ -168,7 +172,11 @@ def _get_category_skill_names(categories: list[str]) -> set[str]:
     map_file = Path(__file__).resolve().parent / "bundled_skills" / "bundled_skills_map.json"
     if not map_file.exists():
         # Try project-level path
-        map_file = Path(__file__).resolve().parent.parent.parent / "skills-registry" / "bundled_skills_map.json"
+        map_file = (
+            Path(__file__).resolve().parent.parent.parent
+            / "skills-registry"
+            / "bundled_skills_map.json"
+        )
     if not map_file.exists():
         return set()
 

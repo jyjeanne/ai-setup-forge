@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import contextlib
 import json
 import os
 import sqlite3
@@ -9,7 +10,6 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from ai_setup_forge.constants import get_home
-
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -22,6 +22,7 @@ _DEFAULT_DB_NAME = "skills_registry.db"
 # ---------------------------------------------------------------------------
 # Data types
 # ---------------------------------------------------------------------------
+
 
 @dataclass
 class SyncResult:
@@ -39,6 +40,7 @@ class SyncResult:
 # ---------------------------------------------------------------------------
 # Path helpers
 # ---------------------------------------------------------------------------
+
 
 def get_registry_db_path() -> Path:
     """Return the path to the registry database file."""
@@ -80,6 +82,7 @@ def _get_bundled_map(filename: str) -> dict:
 # Connection helpers
 # ---------------------------------------------------------------------------
 
+
 def get_connection(db_path: Path | None = None) -> sqlite3.Connection:
     """Open a connection to the registry database."""
     path = db_path or get_registry_db_path()
@@ -100,6 +103,7 @@ def _db_exists(db_path: Path | None = None) -> bool:
 # Initialization
 # ---------------------------------------------------------------------------
 
+
 def init_db(db_path: Path | None = None, force: bool = False) -> sqlite3.Connection:
     """Create the database and apply the schema.
 
@@ -116,14 +120,18 @@ def init_db(db_path: Path | None = None, force: bool = False) -> sqlite3.Connect
     if force:
         # Disable FK checks during drop to avoid ordering issues
         conn.execute("PRAGMA foreign_keys = OFF")
-        tables = [r[0] for r in conn.execute(
-            "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"
-        ).fetchall()]
+        tables = [
+            r[0]
+            for r in conn.execute(
+                "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"
+            ).fetchall()
+        ]
         for table in tables:
             conn.execute(f"DROP TABLE IF EXISTS [{table}]")
-        triggers = [r[0] for r in conn.execute(
-            "SELECT name FROM sqlite_master WHERE type='trigger'"
-        ).fetchall()]
+        triggers = [
+            r[0]
+            for r in conn.execute("SELECT name FROM sqlite_master WHERE type='trigger'").fetchall()
+        ]
         for trigger in triggers:
             conn.execute(f"DROP TRIGGER IF EXISTS [{trigger}]")
         conn.execute("PRAGMA foreign_keys = ON")
@@ -157,9 +165,11 @@ def ensure_registry(db_path: Path | None = None) -> sqlite3.Connection:
 # Bundled sync
 # ---------------------------------------------------------------------------
 
+
 def _get_bundled_skills_dir() -> Path:
     """Return path to bundled skills/ directory."""
     from ai_setup_forge.source_parser import _get_bundled_skills_dir as _get_dir
+
     return _get_dir()
 
 
@@ -297,14 +307,18 @@ def sync_skills_from_dir(
                 result.updated += 1
             else:
                 upsert_skill(
-                    conn, name=skill.name, description=skill.description,
-                    origin=origin, skill_path=str(skill.path),
+                    conn,
+                    name=skill.name,
+                    description=skill.description,
+                    origin=origin,
+                    skill_path=str(skill.path),
                     _commit=False,
                 )
                 result.added += 1
 
             if validate:
                 from ai_setup_forge.validator import validate_skill_path
+
                 vr = validate_skill_path(skill.path)
                 set_validated(conn, skill.name, vr.valid, _commit=False)
 
@@ -319,6 +333,7 @@ def sync_skills_from_dir(
 # ---------------------------------------------------------------------------
 # Skills CRUD
 # ---------------------------------------------------------------------------
+
 
 def upsert_skill(
     conn: sqlite3.Connection,
@@ -335,7 +350,8 @@ def upsert_skill(
 ) -> int:
     """Insert or update a skill in the registry. Returns the skill ID."""
     conn.execute(
-        """INSERT INTO skills (name, description, origin, source_url, author, version, license, skill_path)
+        """INSERT INTO skills
+           (name, description, origin, source_url, author, version, license, skill_path)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
            ON CONFLICT(name) DO UPDATE SET
                description = excluded.description,
@@ -360,7 +376,8 @@ def get_skill(conn: sqlite3.Connection, name: str) -> dict | None:
     skill = dict(row)
     # Enrich with categories and tags
     skill["categories"] = [
-        r[0] for r in conn.execute(
+        r[0]
+        for r in conn.execute(
             """SELECT c.name FROM categories c
                JOIN skill_categories sc ON c.id = sc.category_id
                WHERE sc.skill_id = ?""",
@@ -368,7 +385,8 @@ def get_skill(conn: sqlite3.Connection, name: str) -> dict | None:
         ).fetchall()
     ]
     skill["tags"] = [
-        r[0] for r in conn.execute(
+        r[0]
+        for r in conn.execute(
             """SELECT t.name FROM tags t
                JOIN skill_tags st ON t.id = st.tag_id
                WHERE st.skill_id = ?""",
@@ -376,7 +394,8 @@ def get_skill(conn: sqlite3.Connection, name: str) -> dict | None:
         ).fetchall()
     ]
     skill["agents"] = [
-        {"agent_name": r[0], "scope": r[1]} for r in conn.execute(
+        {"agent_name": r[0], "scope": r[1]}
+        for r in conn.execute(
             "SELECT agent_name, scope FROM skill_agents WHERE skill_id = ?",
             (skill["id"],),
         ).fetchall()
@@ -440,7 +459,8 @@ def list_skills(
     for row in rows:
         skill = dict(row)
         skill["categories"] = [
-            r[0] for r in conn.execute(
+            r[0]
+            for r in conn.execute(
                 """SELECT c.name FROM categories c
                    JOIN skill_categories sc ON c.id = sc.category_id
                    WHERE sc.skill_id = ?""",
@@ -448,7 +468,8 @@ def list_skills(
             ).fetchall()
         ]
         skill["tags"] = [
-            r[0] for r in conn.execute(
+            r[0]
+            for r in conn.execute(
                 """SELECT t.name FROM tags t
                    JOIN skill_tags st ON t.id = st.tag_id
                    WHERE st.skill_id = ?""",
@@ -478,7 +499,8 @@ def search_skills(conn: sqlite3.Connection, query: str) -> list[dict]:
     for row in rows:
         skill = dict(row)
         skill["categories"] = [
-            r[0] for r in conn.execute(
+            r[0]
+            for r in conn.execute(
                 """SELECT c.name FROM categories c
                    JOIN skill_categories sc ON c.id = sc.category_id
                    WHERE sc.skill_id = ?""",
@@ -486,7 +508,8 @@ def search_skills(conn: sqlite3.Connection, query: str) -> list[dict]:
             ).fetchall()
         ]
         skill["tags"] = [
-            r[0] for r in conn.execute(
+            r[0]
+            for r in conn.execute(
                 """SELECT t.name FROM tags t
                    JOIN skill_tags st ON t.id = st.tag_id
                    WHERE st.skill_id = ?""",
@@ -500,6 +523,7 @@ def search_skills(conn: sqlite3.Connection, query: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 # Install tracking
 # ---------------------------------------------------------------------------
+
 
 def mark_installed(
     conn: sqlite3.Connection,
@@ -569,7 +593,9 @@ def mark_uninstalled(
     conn.commit()
 
 
-def set_validated(conn: sqlite3.Connection, skill_name: str, valid: bool, *, _commit: bool = True) -> None:
+def set_validated(
+    conn: sqlite3.Connection, skill_name: str, valid: bool, *, _commit: bool = True
+) -> None:
     """Set the validated flag for a skill."""
     conn.execute(
         "UPDATE skills SET validated = ? WHERE name = ?",
@@ -582,6 +608,7 @@ def set_validated(conn: sqlite3.Connection, skill_name: str, valid: bool, *, _co
 # ---------------------------------------------------------------------------
 # Agent definitions CRUD
 # ---------------------------------------------------------------------------
+
 
 def upsert_agent_def(
     conn: sqlite3.Connection,
@@ -601,7 +628,9 @@ def upsert_agent_def(
     """Insert or update an agent definition. Returns the agent def ID."""
     tools_json = json.dumps(tools) if tools is not None else None
     conn.execute(
-        """INSERT INTO agent_definitions (name, description, origin, source_url, version, category, model, agent_path, tools, target)
+        """INSERT INTO agent_definitions
+           (name, description, origin, source_url, version,
+            category, model, agent_path, tools, target)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
            ON CONFLICT(name) DO UPDATE SET
                description = excluded.description,
@@ -612,7 +641,18 @@ def upsert_agent_def(
                agent_path = COALESCE(excluded.agent_path, agent_definitions.agent_path),
                tools = excluded.tools,
                target = excluded.target""",
-        (name, description, origin, source_url, version, category, model, agent_path, tools_json, target),
+        (
+            name,
+            description,
+            origin,
+            source_url,
+            version,
+            category,
+            model,
+            agent_path,
+            tools_json,
+            target,
+        ),
     )
     if _commit:
         conn.commit()
@@ -628,12 +668,11 @@ def get_agent_def(conn: sqlite3.Connection, name: str) -> dict | None:
     agent_def = dict(row)
     # Deserialize tools JSON
     if agent_def.get("tools") and isinstance(agent_def["tools"], str):
-        try:
+        with contextlib.suppress(json.JSONDecodeError, TypeError):
             agent_def["tools"] = json.loads(agent_def["tools"])
-        except (json.JSONDecodeError, TypeError):
-            pass
     agent_def["tags"] = [
-        r[0] for r in conn.execute(
+        r[0]
+        for r in conn.execute(
             """SELECT t.name FROM tags t
                JOIN agent_def_tags adt ON t.id = adt.tag_id
                WHERE adt.agent_def_id = ?""",
@@ -641,7 +680,8 @@ def get_agent_def(conn: sqlite3.Connection, name: str) -> dict | None:
         ).fetchall()
     ]
     agent_def["coding_agents"] = [
-        {"coding_agent_name": r[0], "scope": r[1]} for r in conn.execute(
+        {"coding_agent_name": r[0], "scope": r[1]}
+        for r in conn.execute(
             "SELECT coding_agent_name, scope FROM agent_def_coding_agents WHERE agent_def_id = ?",
             (agent_def["id"],),
         ).fetchall()
@@ -686,7 +726,8 @@ def list_agent_defs(
     for row in rows:
         ad = dict(row)
         ad["tags"] = [
-            r[0] for r in conn.execute(
+            r[0]
+            for r in conn.execute(
                 """SELECT t.name FROM tags t
                    JOIN agent_def_tags adt ON t.id = adt.tag_id
                    WHERE adt.agent_def_id = ?""",
@@ -714,7 +755,8 @@ def search_agent_defs(conn: sqlite3.Connection, query: str) -> list[dict]:
     for row in rows:
         ad = dict(row)
         ad["tags"] = [
-            r[0] for r in conn.execute(
+            r[0]
+            for r in conn.execute(
                 """SELECT t.name FROM tags t
                    JOIN agent_def_tags adt ON t.id = adt.tag_id
                    WHERE adt.agent_def_id = ?""",
@@ -748,7 +790,8 @@ def mark_agent_installed(
 
     for ca_name in coding_agents:
         conn.execute(
-            """INSERT OR IGNORE INTO agent_def_coding_agents (agent_def_id, coding_agent_name, scope)
+            """INSERT OR IGNORE INTO agent_def_coding_agents
+               (agent_def_id, coding_agent_name, scope)
                VALUES (?, ?, ?)""",
             (ad_id, ca_name, scope),
         )
@@ -795,6 +838,7 @@ def mark_agent_uninstalled(
 # Classification: tags & categories
 # ---------------------------------------------------------------------------
 
+
 def _ensure_tag(conn: sqlite3.Connection, tag_name: str) -> int:
     """Get or create a tag, return its ID."""
     conn.execute("INSERT OR IGNORE INTO tags (name) VALUES (?)", (tag_name,))
@@ -809,7 +853,9 @@ def _ensure_category(conn: sqlite3.Connection, cat_name: str) -> int:
     return row[0]
 
 
-def add_tags(conn: sqlite3.Connection, skill_name: str, tags: list[str], *, _commit: bool = True) -> None:
+def add_tags(
+    conn: sqlite3.Connection, skill_name: str, tags: list[str], *, _commit: bool = True
+) -> None:
     """Add tags to a skill."""
     row = conn.execute("SELECT id FROM skills WHERE name = ?", (skill_name,)).fetchone()
     if not row:
@@ -841,7 +887,9 @@ def remove_tags(conn: sqlite3.Connection, skill_name: str, tags: list[str]) -> N
     conn.commit()
 
 
-def add_categories(conn: sqlite3.Connection, skill_name: str, categories: list[str], *, _commit: bool = True) -> None:
+def add_categories(
+    conn: sqlite3.Connection, skill_name: str, categories: list[str], *, _commit: bool = True
+) -> None:
     """Assign categories to a skill."""
     row = conn.execute("SELECT id FROM skills WHERE name = ?", (skill_name,)).fetchone()
     if not row:
@@ -882,7 +930,9 @@ def set_origin(conn: sqlite3.Connection, skill_name: str, origin: str) -> None:
     conn.commit()
 
 
-def add_agent_def_tags(conn: sqlite3.Connection, agent_def_name: str, tags: list[str], *, _commit: bool = True) -> None:
+def add_agent_def_tags(
+    conn: sqlite3.Connection, agent_def_name: str, tags: list[str], *, _commit: bool = True
+) -> None:
     """Add tags to an agent definition."""
     row = conn.execute(
         "SELECT id FROM agent_definitions WHERE name = ?", (agent_def_name,)
@@ -900,9 +950,7 @@ def add_agent_def_tags(conn: sqlite3.Connection, agent_def_name: str, tags: list
         conn.commit()
 
 
-def remove_agent_def_tags(
-    conn: sqlite3.Connection, agent_def_name: str, tags: list[str]
-) -> None:
+def remove_agent_def_tags(conn: sqlite3.Connection, agent_def_name: str, tags: list[str]) -> None:
     """Remove tags from an agent definition."""
     row = conn.execute(
         "SELECT id FROM agent_definitions WHERE name = ?", (agent_def_name,)
@@ -923,6 +971,7 @@ def remove_agent_def_tags(
 # ---------------------------------------------------------------------------
 # Statistics
 # ---------------------------------------------------------------------------
+
 
 def get_stats(conn: sqlite3.Connection) -> dict:
     """Return registry statistics."""
@@ -980,6 +1029,7 @@ def get_stats(conn: sqlite3.Connection) -> dict:
 # ---------------------------------------------------------------------------
 # Origin derivation
 # ---------------------------------------------------------------------------
+
 
 def derive_origin(source_type: str) -> str:
     """Derive registry origin from ParsedSource.type."""

@@ -3,13 +3,11 @@
 from __future__ import annotations
 
 import sqlite3
-import tempfile
 from pathlib import Path
 
 import pytest
 
 from ai_setup_forge.registry import (
-    SyncResult,
     add_agent_def_tags,
     add_categories,
     add_tags,
@@ -56,14 +54,16 @@ def conn(db_path: Path) -> sqlite3.Connection:
 # Initialization
 # ---------------------------------------------------------------------------
 
+
 class TestInitDb:
     def test_creates_database(self, db_path: Path) -> None:
         conn = init_db(db_path)
         assert db_path.is_file()
         # Check tables exist
-        tables = {r[0] for r in conn.execute(
-            "SELECT name FROM sqlite_master WHERE type='table'"
-        ).fetchall()}
+        tables = {
+            r[0]
+            for r in conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
+        }
         assert "skills" in tables
         assert "categories" in tables
         assert "tags" in tables
@@ -129,6 +129,7 @@ class TestEnsureRegistry:
 # ---------------------------------------------------------------------------
 # Skills CRUD
 # ---------------------------------------------------------------------------
+
 
 class TestUpsertSkill:
     def test_insert(self, conn: sqlite3.Connection) -> None:
@@ -266,6 +267,7 @@ class TestSearchSkills:
 # Install tracking
 # ---------------------------------------------------------------------------
 
+
 class TestMarkInstalled:
     def test_mark_installed(self, conn: sqlite3.Connection) -> None:
         upsert_skill(conn, "s1", "desc", "bundled")
@@ -323,6 +325,7 @@ class TestSetValidated:
 # Classification
 # ---------------------------------------------------------------------------
 
+
 class TestTagsAndCategories:
     def test_add_and_remove_tags(self, conn: sqlite3.Connection) -> None:
         upsert_skill(conn, "s1", "desc", "bundled")
@@ -366,11 +369,16 @@ class TestTagsAndCategories:
 # Agent definitions
 # ---------------------------------------------------------------------------
 
+
 class TestAgentDefs:
     def test_upsert_and_get(self, conn: sqlite3.Connection) -> None:
         ad_id = upsert_agent_def(
-            conn, "docs-agent", "Write docs", "bundled",
-            category="documentation", model="Claude Opus 4.6",
+            conn,
+            "docs-agent",
+            "Write docs",
+            "bundled",
+            category="documentation",
+            model="Claude Opus 4.6",
         )
         conn.commit()
         assert ad_id > 0
@@ -383,7 +391,10 @@ class TestAgentDefs:
 
     def test_upsert_with_tools_and_target(self, conn: sqlite3.Connection) -> None:
         upsert_agent_def(
-            conn, "my-agent", "desc", "bundled",
+            conn,
+            "my-agent",
+            "desc",
+            "bundled",
             tools=["read", "edit", "search"],
             target="github-copilot",
         )
@@ -443,6 +454,7 @@ class TestAgentDefs:
 # Bundled sync
 # ---------------------------------------------------------------------------
 
+
 class TestBundledSync:
     def test_sync_bundled_skills(self, conn: sqlite3.Connection) -> None:
         result = sync_bundled_skills(conn)
@@ -464,6 +476,7 @@ class TestBundledSync:
 # ---------------------------------------------------------------------------
 # Statistics
 # ---------------------------------------------------------------------------
+
 
 class TestStats:
     def test_get_stats(self, conn: sqlite3.Connection) -> None:
@@ -492,6 +505,7 @@ class TestStats:
 # ---------------------------------------------------------------------------
 # _commit=False behavior
 # ---------------------------------------------------------------------------
+
 
 class TestCommitFalse:
     def test_upsert_skill_no_commit_rolls_back(self, conn: sqlite3.Connection) -> None:
@@ -537,11 +551,15 @@ class TestCommitFalse:
 # tools/target clearing via upsert_agent_def
 # ---------------------------------------------------------------------------
 
+
 class TestAgentDefToolsClearing:
     def test_tools_none_clears_existing_tools(self, conn: sqlite3.Connection) -> None:
         """Passing tools=None on update should clear previously set tools (not COALESCE)."""
         upsert_agent_def(
-            conn, "agent-clear", "desc", "bundled",
+            conn,
+            "agent-clear",
+            "desc",
+            "bundled",
             tools=["read", "edit"],
             target="github-copilot",
         )
@@ -571,15 +589,18 @@ class TestAgentDefToolsClearing:
 
 
 class TestDeriveOrigin:
-    @pytest.mark.parametrize("source_type,expected", [
-        ("bundled", "bundled"),
-        ("github", "github"),
-        ("gitlab", "gitlab"),
-        ("local", "homemade"),
-        ("git", "github"),
-        ("direct-url", "website"),
-        ("unknown-type", "unknown"),
-    ])
+    @pytest.mark.parametrize(
+        "source_type,expected",
+        [
+            ("bundled", "bundled"),
+            ("github", "github"),
+            ("gitlab", "gitlab"),
+            ("local", "homemade"),
+            ("git", "github"),
+            ("direct-url", "website"),
+            ("unknown-type", "unknown"),
+        ],
+    )
     def test_derive_origin(self, source_type: str, expected: str) -> None:
         assert derive_origin(source_type) == expected
 
@@ -588,22 +609,32 @@ class TestDeriveOrigin:
 # Search agent definitions
 # ---------------------------------------------------------------------------
 
+
 class TestSearchAgentDefs:
     """Tests for search_agent_defs()."""
 
     def _seed(self, conn: sqlite3.Connection) -> None:
         """Insert a small set of agent defs for search tests."""
         upsert_agent_def(
-            conn, "docs-writer", "Generate documentation from code",
-            "bundled", category="documentation",
+            conn,
+            "docs-writer",
+            "Generate documentation from code",
+            "bundled",
+            category="documentation",
         )
         upsert_agent_def(
-            conn, "test-runner", "Run and analyse test suites",
-            "bundled", category="testing",
+            conn,
+            "test-runner",
+            "Run and analyse test suites",
+            "bundled",
+            category="testing",
         )
         upsert_agent_def(
-            conn, "api-designer", "Design REST APIs",
-            "bundled", category="architecture",
+            conn,
+            "api-designer",
+            "Design REST APIs",
+            "bundled",
+            category="architecture",
         )
         conn.commit()
         add_agent_def_tags(conn, "docs-writer", ["markdown", "readme"])

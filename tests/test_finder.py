@@ -1,14 +1,12 @@
 """Tests for the finder module."""
 
-from unittest.mock import patch, MagicMock
-
-import pytest
+from unittest.mock import MagicMock, patch
 
 from ai_setup_forge.finder import (
     FindResult,
+    search_all,
     search_bundled,
     search_registry,
-    search_all,
 )
 
 

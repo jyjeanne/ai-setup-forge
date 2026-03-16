@@ -49,8 +49,10 @@ class TestFindInstalledSkills:
 class TestRemoveSkill:
     def test_remove_project_skill(self, tmp_path):
         _setup_installed(tmp_path)
-        with patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path), \
-             patch("ai_setup_forge.remover.get_home", return_value=tmp_path):
+        with (
+            patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path),
+            patch("ai_setup_forge.remover.get_home", return_value=tmp_path),
+        ):
             results = remove_skill("test-skill", is_global=False)
         assert len(results) >= 1
         # Both canonical and agent dir should be gone
@@ -58,16 +60,20 @@ class TestRemoveSkill:
         assert not (tmp_path / ".claude" / "skills" / "test-skill").exists()
 
     def test_remove_nonexistent(self, tmp_path):
-        with patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path), \
-             patch("ai_setup_forge.remover.get_home", return_value=tmp_path):
+        with (
+            patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path),
+            patch("ai_setup_forge.remover.get_home", return_value=tmp_path),
+        ):
             results = remove_skill("no-skill", is_global=False)
         assert results == []
 
     def test_remove_specific_agent_preserves_canonical(self, tmp_path):
         _setup_installed(tmp_path)
-        with patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path), \
-             patch("ai_setup_forge.remover.get_home", return_value=tmp_path):
-            results = remove_skill(
+        with (
+            patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path),
+            patch("ai_setup_forge.remover.get_home", return_value=tmp_path),
+        ):
+            remove_skill(
                 "test-skill",
                 agent_names=["claude-code"],
                 is_global=False,
@@ -79,9 +85,11 @@ class TestRemoveSkill:
 
     def test_remove_all_agents_removes_canonical(self, tmp_path):
         _setup_installed(tmp_path)
-        with patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path), \
-             patch("ai_setup_forge.remover.get_home", return_value=tmp_path):
-            results = remove_skill(
+        with (
+            patch("ai_setup_forge.remover.Path.cwd", return_value=tmp_path),
+            patch("ai_setup_forge.remover.get_home", return_value=tmp_path),
+        ):
+            remove_skill(
                 "test-skill",
                 agent_names=None,  # all agents
                 is_global=False,

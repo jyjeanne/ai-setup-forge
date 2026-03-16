@@ -29,7 +29,9 @@ class TestReadWriteLock:
 
     def test_write_and_read(self, tmp_path):
         with patch("ai_setup_forge.skill_lock.get_home", return_value=tmp_path):
-            write_lock({"version": 1, "skills": {"foo": {"source": "a/b"}}, "last_selected_agents": []})
+            write_lock(
+                {"version": 1, "skills": {"foo": {"source": "a/b"}}, "last_selected_agents": []}
+            )
             data = read_lock()
         assert "foo" in data["skills"]
         assert data["skills"]["foo"]["source"] == "a/b"
@@ -43,12 +45,13 @@ class TestReadWriteLock:
         assert data["version"] == 1
         assert data["skills"] == {}
 
-
     def test_read_wrong_type_skills(self, tmp_path):
         """If 'skills' is not a dict, reset to empty dict."""
         lock = _lock_path(tmp_path)
         lock.parent.mkdir(parents=True)
-        lock.write_text(json.dumps({"version": 1, "skills": "not-a-dict", "last_selected_agents": []}))
+        lock.write_text(
+            json.dumps({"version": 1, "skills": "not-a-dict", "last_selected_agents": []})
+        )
         with patch("ai_setup_forge.skill_lock.get_home", return_value=tmp_path):
             data = read_lock()
         assert data["skills"] == {}
@@ -85,7 +88,9 @@ class TestSkillEntries:
         with patch("ai_setup_forge.skill_lock.get_home", return_value=tmp_path):
             add_skill_entry("my-skill", "owner/repo", "github", "https://github.com/owner/repo.git")
             entry1 = get_skill_entry("my-skill")
-            add_skill_entry("my-skill", "owner/repo2", "github", "https://github.com/owner/repo2.git")
+            add_skill_entry(
+                "my-skill", "owner/repo2", "github", "https://github.com/owner/repo2.git"
+            )
             entry2 = get_skill_entry("my-skill")
         assert entry2.source == "owner/repo2"
         assert entry2.installed_at == entry1.installed_at  # preserved

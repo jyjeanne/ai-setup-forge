@@ -9,12 +9,12 @@ from pathlib import Path
 
 import httpx
 
-from ai_setup_forge.skill_lock import get_skill_entry, read_lock
-
+from ai_setup_forge.skill_lock import read_lock
 
 # ---------------------------------------------------------------------------
 # Types
 # ---------------------------------------------------------------------------
+
 
 @dataclass
 class SkillUpdateInfo:
@@ -51,6 +51,7 @@ class CheckResult:
 # ---------------------------------------------------------------------------
 # GitHub API helpers
 # ---------------------------------------------------------------------------
+
 
 def _get_github_token() -> str | None:
     """Get GitHub token from environment or gh CLI."""
@@ -181,6 +182,7 @@ def _get_tree_sha(
 # Check
 # ---------------------------------------------------------------------------
 
+
 def check_for_updates() -> CheckResult:
     """Check all globally installed skills for updates.
 
@@ -248,6 +250,7 @@ def check_for_updates() -> CheckResult:
 # Update
 # ---------------------------------------------------------------------------
 
+
 def update_skill(
     skill_name: str,
     agent_names: list[str] | None = None,
@@ -279,6 +282,7 @@ def update_skill(
         agent_names = get_last_agents()
     if not agent_names:
         from ai_setup_forge.agents import detect_installed_agents
+
         agent_names = detect_installed_agents()
     if not agent_names:
         return {"status": "error", "message": "No agents available for update"}
@@ -339,12 +343,16 @@ def update_skill(
                 mark_installed,
                 upsert_skill,
             )
+
             conn = ensure_registry()
             try:
                 origin = derive_origin(parsed.type)
                 upsert_skill(
-                    conn, name=skill.name, description=skill.description,
-                    origin=origin, source_url=parsed.url,
+                    conn,
+                    name=skill.name,
+                    description=skill.description,
+                    origin=origin,
+                    source_url=parsed.url,
                 )
                 mark_installed(conn, skill.name, agent_names, "global", parsed.url, origin)
             finally:

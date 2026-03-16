@@ -1,9 +1,5 @@
 """Tests for the source_parser module."""
 
-from pathlib import Path
-
-import pytest
-
 from ai_setup_forge.source_parser import parse_source
 
 

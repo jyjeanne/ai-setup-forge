@@ -58,8 +58,10 @@ class TestInstallSkill:
         project_dir = tmp_path / "project"
         project_dir.mkdir()
 
-        with patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir), \
-             patch("ai_setup_forge.installer.get_home", return_value=tmp_path):
+        with (
+            patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir),
+            patch("ai_setup_forge.installer.get_home", return_value=tmp_path),
+        ):
             results = install_skill(skill, ["claude-code"], is_global=False, mode="copy")
 
         assert len(results) == 1
@@ -80,8 +82,10 @@ class TestInstallSkill:
         project_dir = tmp_path / "project"
         project_dir.mkdir()
 
-        with patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir), \
-             patch("ai_setup_forge.installer.get_home", return_value=tmp_path):
+        with (
+            patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir),
+            patch("ai_setup_forge.installer.get_home", return_value=tmp_path),
+        ):
             results = install_skill(skill, ["github-copilot"], is_global=False, mode="copy")
 
         assert len(results) == 1
@@ -95,8 +99,10 @@ class TestInstallSkill:
         project_dir = tmp_path / "project"
         project_dir.mkdir()
 
-        with patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir), \
-             patch("ai_setup_forge.installer.get_home", return_value=tmp_path):
+        with (
+            patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir),
+            patch("ai_setup_forge.installer.get_home", return_value=tmp_path),
+        ):
             results = install_skill(
                 skill,
                 ["claude-code", "mistral-vibe", "github-copilot"],
@@ -118,8 +124,10 @@ class TestInstallSkill:
         project_dir = tmp_path / "project"
         project_dir.mkdir()
 
-        with patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir), \
-             patch("ai_setup_forge.installer.get_home", return_value=tmp_path):
+        with (
+            patch("ai_setup_forge.installer.Path.cwd", return_value=project_dir),
+            patch("ai_setup_forge.installer.get_home", return_value=tmp_path),
+        ):
             results = install_skill(skill, ["nonexistent"], is_global=False)
 
         assert results[0]["status"] == "error"
@@ -158,8 +166,10 @@ class TestCreateLink:
         (target / "data.txt").write_text("content")
         source = tmp_path / "link"
 
-        with patch("ai_setup_forge.installer.sys") as mock_sys, \
-             patch.object(Path, "symlink_to", side_effect=OSError("no symlink")):
+        with (
+            patch("ai_setup_forge.installer.sys") as mock_sys,
+            patch.object(Path, "symlink_to", side_effect=OSError("no symlink")),
+        ):
             mock_sys.platform = "linux"
             method = _create_link(source, target)
 
@@ -208,9 +218,11 @@ class TestCreateLink:
 
         mock_run = MagicMock(return_value=MagicMock(returncode=0))
 
-        with patch("ai_setup_forge.installer.sys") as mock_sys, \
-             patch.object(Path, "symlink_to", side_effect=OSError("no symlink")), \
-             patch("subprocess.run", mock_run):
+        with (
+            patch("ai_setup_forge.installer.sys") as mock_sys,
+            patch.object(Path, "symlink_to", side_effect=OSError("no symlink")),
+            patch("subprocess.run", mock_run),
+        ):
             mock_sys.platform = "win32"
             method = _create_link(source, target)
 
@@ -230,12 +242,14 @@ class TestCreateLink:
         (target / "file.txt").write_text("hello")
         source = tmp_path / "link"
 
-        with patch("ai_setup_forge.installer.sys") as mock_sys, \
-             patch.object(Path, "symlink_to", side_effect=OSError("no symlink")), \
-             patch(
-                 "subprocess.run",
-                 side_effect=subprocess.CalledProcessError(1, "cmd"),
-             ):
+        with (
+            patch("ai_setup_forge.installer.sys") as mock_sys,
+            patch.object(Path, "symlink_to", side_effect=OSError("no symlink")),
+            patch(
+                "subprocess.run",
+                side_effect=subprocess.CalledProcessError(1, "cmd"),
+            ),
+        ):
             mock_sys.platform = "win32"
             method = _create_link(source, target)
 

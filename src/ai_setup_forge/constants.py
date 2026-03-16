@@ -28,10 +28,20 @@ GIT_CLONE_TIMEOUT_SECONDS = 60
 SKILL_FILE_NAME = "SKILL.md"
 
 # --- Discovery: directories to skip during recursive search ---
-SKIP_DIRS = frozenset({
-    "node_modules", ".git", "dist", "build", "__pycache__",
-    ".venv", "venv", ".tox", ".mypy_cache", ".ruff_cache",
-})
+SKIP_DIRS = frozenset(
+    {
+        "node_modules",
+        ".git",
+        "dist",
+        "build",
+        "__pycache__",
+        ".venv",
+        "venv",
+        ".tox",
+        ".mypy_cache",
+        ".ruff_cache",
+    }
+)
 
 # --- Discovery: priority search directories (relative to source root) ---
 PRIORITY_SEARCH_DIRS = [

@@ -39,7 +39,7 @@ def _get_git_auth_env() -> dict[str, str]:
         env["GIT_TERMINAL_PROMPT"] = "0"
         # Rewrite HTTPS URLs to use token auth
         env["GIT_CONFIG_COUNT"] = "1"
-        env["GIT_CONFIG_KEY_0"] = "url.https://x-access-token:{}@github.com/.insteadOf".format(token)
+        env["GIT_CONFIG_KEY_0"] = f"url.https://x-access-token:{token}@github.com/.insteadOf"
         env["GIT_CONFIG_VALUE_0"] = "https://github.com/"
 
     return env
@@ -83,10 +83,10 @@ def shallow_clone(
         )
     except subprocess.TimeoutExpired:
         cleanup_clone(tmp_dir)
-        raise GitError(f"Git clone timed out after {timeout}s: {url}")
+        raise GitError(f"Git clone timed out after {timeout}s: {url}") from None
     except FileNotFoundError:
         cleanup_clone(tmp_dir)
-        raise GitError("git is not installed or not in PATH")
+        raise GitError("git is not installed or not in PATH") from None
 
     if result.returncode != 0:
         stderr = result.stderr.strip()
@@ -95,8 +95,7 @@ def shallow_clone(
         # Detect auth errors
         if "Authentication failed" in stderr or "could not read Username" in stderr:
             raise GitError(
-                f"Authentication failed for {url}. "
-                "Set GITHUB_TOKEN or run 'gh auth login'."
+                f"Authentication failed for {url}. Set GITHUB_TOKEN or run 'gh auth login'."
             )
         raise GitError(f"Git clone failed for {url}: {stderr or 'unknown error'}")
 
@@ -122,7 +121,7 @@ def cleanup_clone(path: Path) -> None:
         # Also clean parent if it's an empty skills-* dir
         parent = resolved.parent
         if parent.name.startswith("skills-") and parent != tmp_root:
-            try:
+            import contextlib
+
+            with contextlib.suppress(OSError):
                 parent.rmdir()  # only succeeds if empty
-            except OSError:
-                pass

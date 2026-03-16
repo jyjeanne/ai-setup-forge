@@ -2,13 +2,12 @@
 
 from __future__ import annotations
 
-import os
 import shutil
 import sys
 from pathlib import Path
 
 from ai_setup_forge.agents import AGENTS
-from ai_setup_forge.constants import CANONICAL_SKILLS_DIR, SKILLS_SUBDIR, AGENTS_DIR, get_home
+from ai_setup_forge.constants import AGENTS_DIR, CANONICAL_SKILLS_DIR, SKILLS_SUBDIR, get_home
 from ai_setup_forge.types import AgentConfig, Skill
 
 
@@ -35,9 +34,7 @@ def _validate_target_path(target: Path, base: Path) -> None:
     try:
         target.resolve().relative_to(base.resolve())
     except ValueError:
-        raise InstallError(
-            f"Path traversal detected: {target} is not within {base}"
-        )
+        raise InstallError(f"Path traversal detected: {target} is not within {base}") from None
 
 
 def _copy_skill_to_canonical(skill: Skill, canonical: Path) -> None:
@@ -49,7 +46,7 @@ def _copy_skill_to_canonical(skill: Skill, canonical: Path) -> None:
         canonical.parent.mkdir(parents=True, exist_ok=True)
         shutil.copytree(skill.path, canonical)
     except OSError as e:
-        raise InstallError(f"Failed to copy skill to {canonical}: {e}")
+        raise InstallError(f"Failed to copy skill to {canonical}: {e}") from e
 
 
 def _create_link(source: Path, target: Path) -> str:
@@ -86,6 +83,7 @@ def _create_link(source: Path, target: Path) -> str:
     if sys.platform == "win32":
         try:
             import subprocess
+
             subprocess.run(
                 ["cmd", "/c", "mklink", "/J", str(source), str(target)],
                 capture_output=True,
@@ -106,9 +104,7 @@ def _needs_agent_link(agent_name: str, is_global: bool) -> bool:
     Copilot CLI reads .agents/skills/ at project level, so no link needed
     for project-level installs.
     """
-    if agent_name == "github-copilot" and not is_global:
-        return False
-    return True
+    return not (agent_name == "github-copilot" and not is_global)
 
 
 def install_skill(
@@ -131,10 +127,7 @@ def install_skill(
     canonical = _canonical_dir(skill.name, is_global)
 
     # Validate canonical path
-    if is_global:
-        base = get_home() / AGENTS_DIR
-    else:
-        base = Path.cwd() / AGENTS_DIR
+    base = get_home() / AGENTS_DIR if is_global else Path.cwd() / AGENTS_DIR
     _validate_target_path(canonical, base)
 
     # Step 1: Copy to canonical
@@ -146,21 +139,25 @@ def install_skill(
     for agent_name in agent_names:
         agent = AGENTS.get(agent_name)
         if not agent:
-            results.append({
-                "agent": agent_name,
-                "status": "error",
-                "message": f"Unknown agent: {agent_name}",
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "error",
+                    "message": f"Unknown agent: {agent_name}",
+                }
+            )
             continue
 
         if not _needs_agent_link(agent_name, is_global):
-            results.append({
-                "agent": agent_name,
-                "status": "ok",
-                "message": "Skill in canonical .agents/skills/ (no link needed)",
-                "method": "canonical",
-                "path": str(canonical),
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "ok",
+                    "message": "Skill in canonical .agents/skills/ (no link needed)",
+                    "method": "canonical",
+                    "path": str(canonical),
+                }
+            )
             continue
 
         agent_dir = _agent_skills_dir(agent, is_global)
@@ -175,11 +172,13 @@ def install_skill(
         else:
             method = _create_link(agent_skill_path, canonical)
 
-        results.append({
-            "agent": agent_name,
-            "status": "ok",
-            "method": method,
-            "path": str(agent_skill_path),
-        })
+        results.append(
+            {
+                "agent": agent_name,
+                "status": "ok",
+                "method": method,
+                "path": str(agent_skill_path),
+            }
+        )
 
     return results

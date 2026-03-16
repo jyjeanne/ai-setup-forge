@@ -30,9 +30,7 @@ def _is_link_or_junction(path: Path) -> bool:
     """Check if path is a symlink or junction (works on all Python 3.10+)."""
     if path.is_symlink():
         return True
-    if hasattr(path, "is_junction") and path.is_junction():
-        return True
-    return False
+    return bool(hasattr(path, "is_junction") and path.is_junction())
 
 
 def _remove_path(path: Path) -> bool:
@@ -83,10 +81,7 @@ def find_installed_skills(
         if not agent:
             continue
 
-        if is_global:
-            agent_dir = agent.global_skills_dir
-        else:
-            agent_dir = Path.cwd() / agent.skills_dir
+        agent_dir = agent.global_skills_dir if is_global else Path.cwd() / agent.skills_dir
 
         if not agent_dir.is_dir():
             continue
@@ -129,20 +124,24 @@ def remove_skill(
     for agent_name in agent_names:
         path = _agent_skill_path(agent_name, skill_name, is_global)
         if path and _remove_path(path):
-            results.append({
-                "agent": agent_name,
-                "status": "removed",
-                "path": str(path),
-            })
+            results.append(
+                {
+                    "agent": agent_name,
+                    "status": "removed",
+                    "path": str(path),
+                }
+            )
 
     # Only remove canonical when removing from ALL agents
     if remove_all:
         canonical = _canonical_dir(skill_name, is_global)
         if _remove_path(canonical):
-            results.append({
-                "agent": "canonical",
-                "status": "removed",
-                "path": str(canonical),
-            })
+            results.append(
+                {
+                    "agent": "canonical",
+                    "status": "removed",
+                    "path": str(canonical),
+                }
+            )
 
     return results

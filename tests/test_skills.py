@@ -2,8 +2,6 @@
 
 from pathlib import Path
 
-import pytest
-
 from ai_setup_forge.skills import discover_skills, filter_skills, parse_skill_md
 
 
@@ -39,16 +37,15 @@ class TestParseSkillMd:
     def test_missing_description(self, tmp_path):
         skill_dir = tmp_path / "bad"
         skill_dir.mkdir()
-        (skill_dir / "SKILL.md").write_text(
-            "---\nname: bad\n---\n\nBody\n", encoding="utf-8"
-        )
+        (skill_dir / "SKILL.md").write_text("---\nname: bad\n---\n\nBody\n", encoding="utf-8")
         assert parse_skill_md(skill_dir / "SKILL.md") is None
 
     def test_internal_skill_hidden(self, tmp_path):
         skill_dir = tmp_path / "internal"
         skill_dir.mkdir()
         (skill_dir / "SKILL.md").write_text(
-            "---\nname: internal\ndescription: Hidden.\nmetadata:\n  internal: true\n---\n\n# Body\n",
+            "---\nname: internal\ndescription: Hidden.\n"
+            "metadata:\n  internal: true\n---\n\n# Body\n",
             encoding="utf-8",
         )
         assert parse_skill_md(skill_dir / "SKILL.md") is None
@@ -57,7 +54,8 @@ class TestParseSkillMd:
         skill_dir = tmp_path / "internal"
         skill_dir.mkdir()
         (skill_dir / "SKILL.md").write_text(
-            "---\nname: internal\ndescription: Hidden.\nmetadata:\n  internal: true\n---\n\n# Body\n",
+            "---\nname: internal\ndescription: Hidden.\n"
+            "metadata:\n  internal: true\n---\n\n# Body\n",
             encoding="utf-8",
         )
         skill = parse_skill_md(skill_dir / "SKILL.md", include_internal=True)

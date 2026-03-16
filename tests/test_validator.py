@@ -1,9 +1,5 @@
 """Tests for the validator module."""
 
-from pathlib import Path
-
-import pytest
-
 from ai_setup_forge.validator import validate_name, validate_skill_md, validate_skill_path
 
 
